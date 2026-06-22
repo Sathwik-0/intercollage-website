@@ -11,6 +11,19 @@ This file documents the core commands and design rules for building the digital 
 
 ---
 
+## 🔒 THE GOLDEN RULE (STRICT ADDITIVE PROTOCOL)
+**Under absolutely NO circumstances** should any previously built section be redesigned, refactored, rewritten, restructured, or replaced unless explicitly requested by the user.
+- **Do NOT modify:** Hero layout, Navbar layout, Motion systems, Typography systems, Color systems, Grid systems, or existing responsive behaviors.
+- **Strictly Additive:** Any new logic, components, or feature integrations must be attached *additively* without breaking the visual integrity or structure of the existing code.
+- **[FROZEN] Hero Component:** The `Book Campus Visit` CTA button in the Hero section and `src/components/ui/campus-visit-modal.tsx` are perfectly functional and strictly locked.
+- **[FROZEN] Academic Pathways:** The `src/components/sections/programs-bento-grid.tsx` section and its underlying `src/components/ui/program-details-modal.tsx` are completely locked.
+- **[FROZEN] Premium Counseling:** The `src/components/sections/premium-counseling-experience.tsx` ecosystem and its underlying `src/components/ui/counseling-modal.tsx` are functionally complete, rigorously tested, and structurally locked. They must absolutely NEVER be modified.
+- **[FROZEN] Campus Experience (Tour Site):** The `src/components/sections/campus-experience.tsx` section and the `src/components/ui/campus-visit-dialog.tsx` are 100% locked. This specific Tour Website System functionality must not be modified unless explicitly overridden.
+- **[FROZEN] Footer Subscription:** The email subscription form functionality within `src/components/sections/footer.tsx` is completely locked and functionally approved. It must not be altered.
+- **[FROZEN] Transformation Stories CTA:** The "Schedule Free Counseling" card functionality inside `src/components/sections/transformation-stories.tsx` is completely locked. Its integration with `counseling-modal.tsx` is approved and must not be touched.
+
+---
+
 ## Coding Guidelines & Design Rules (Hallmark + UI/UX Pro Max)
 
 ### 1. Structural Variety & Anti-Slop

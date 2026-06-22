@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import InkReveal from "@/components/ui/ink-reveal";
+import { CampusVisitDialog } from "@/components/ui/campus-visit-dialog";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Landmark } from "lucide-react";
 
 export function CampusExperience() {
@@ -295,16 +297,23 @@ export function CampusExperience() {
             </div>
 
             <TimelineContent
-              as="button"
+              as="div"
               animationNum={12}
               timelineRef={sectionRef}
               customVariants={revealVariants}
-              className={cn(
-                "bg-emerald-950 active:scale-[0.98] text-white border border-emerald-800 font-semibold flex items-center justify-center gap-2 transition-all duration-300 px-5 py-3 rounded-xl cursor-pointer text-sm shadow-md",
-                hasHover && "hover:bg-emerald-900 hover:border-emerald-700 hover:gap-3"
-              )}
             >
-              SCHEDULE A SITE TOUR <ArrowRight className="size-4" />
+              <div className="pt-2">
+                <CampusVisitDialog>
+                  <Button 
+                    className={cn(
+                      "bg-[#04241a] hover:bg-[#044e3b] text-white rounded-xl px-6 py-6 font-bold text-[11px] tracking-[0.2em] shadow-sm transition-all duration-300 group",
+                      hasHover && "hover:-translate-y-0.5 hover:shadow-md"
+                    )}
+                  >
+                    SCHEDULE A SITE TOUR <ArrowRight className="size-4 transform group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CampusVisitDialog>
+              </div>
             </TimelineContent>
           </div>
         </div>

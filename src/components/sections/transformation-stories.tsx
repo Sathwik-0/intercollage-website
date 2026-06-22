@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { TimelineContent } from "@/components/ui/timeline-animation";
+import { CounselingModal } from "@/components/ui/counseling-modal";
 import { ArrowRight, Sparkles, BookOpen, GraduationCap, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -447,28 +448,32 @@ export function TransformationStories() {
               timelineRef={containerRef}
               className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-[#e6f4ea] p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden"
             >
-              <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#044e3b08_1px,transparent_1px),linear-gradient(to_bottom,#044e3b08_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
-              
-              <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-widest mb-4">
-                    Admission Cohort Open
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#04241a] leading-tight">
-                    Start Your Own Transformation
-                  </h3>
-                  <p className="text-xs text-[#406b5c] font-semibold leading-relaxed mt-2">
-                    Schedule a diagnostic baseline review with our senior HODs today. Locate your weak conceptual areas and establish a roadmap for IIT & AIIMS.
-                  </p>
-                </div>
+              <CounselingModal variant="student">
+                <div className="w-full h-full flex flex-col justify-between relative">
+                  <div className="absolute bottom-0 left-0 right-0 top-0 -m-6 sm:-m-8 bg-[linear-gradient(to_right,#044e3b08_1px,transparent_1px),linear-gradient(to_bottom,#044e3b08_1px,transparent_1px)] bg-[size:50px_56px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
+                  
+                  <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-widest mb-4">
+                        Admission Cohort Open
+                      </span>
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-[#04241a] leading-tight text-left">
+                        Start Your Own Transformation
+                      </h3>
+                      <p className="text-xs text-[#406b5c] font-semibold leading-relaxed mt-2 text-left">
+                        Schedule a diagnostic baseline review with our senior HODs today. Locate your weak conceptual areas and establish a roadmap for IIT & AIIMS.
+                      </p>
+                    </div>
 
-                <div className="pt-4 border-t border-emerald-100/50 mt-auto flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors flex items-center gap-1.5">
-                    <span>Schedule Free Counseling</span>
-                    <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                    <div className="pt-4 border-t border-emerald-100/50 mt-auto flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+                        <span>Schedule Free Counseling</span>
+                        <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </CounselingModal>
             </TimelineContent>
 
           </div>

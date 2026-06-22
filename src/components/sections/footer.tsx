@@ -88,6 +88,7 @@ function PlayStoreButton({ hasHover }: { hasHover: boolean }) {
 export function Footer() {
   const [isMobile, setIsMobile] = useState(false);
   const [hasHover, setHasHover] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -222,19 +223,35 @@ export function Footer() {
             </p>
             
             {/* Form */}
-            <form onSubmit={(e) => e.preventDefault()} className="relative max-w-[280px]">
-              <input
-                type="email"
-                placeholder="Enter parent or student email"
-                className="w-full bg-white border border-zinc-200/80 focus:border-emerald-300 rounded-xl px-4 py-3.5 text-xs font-bold focus:outline-none pr-14 shadow-sm transition-all placeholder:text-zinc-300 focus:ring-4 focus:ring-emerald-50"
-              />
-              <button 
-                type="submit"
-                className="absolute right-1 top-1 h-10 w-10 rounded-lg bg-[#044e3b] text-white flex items-center justify-center hover:bg-[#033629] active:scale-95 transition-all duration-300 cursor-pointer"
+            {isSubscribed ? (
+              <div className="relative max-w-[280px] bg-emerald-50 border border-emerald-200/50 rounded-xl px-4 py-3.5 flex items-center gap-3 animate-in fade-in zoom-in-95 duration-300">
+                <Sparkles className="size-4 text-emerald-600" />
+                <span className="text-xs font-bold text-emerald-800">
+                  Successfully subscribed!
+                </span>
+              </div>
+            ) : (
+              <form 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setIsSubscribed(true);
+                }} 
+                className="relative max-w-[280px]"
               >
-                <Send className="size-4" />
-              </button>
-            </form>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter parent or student email"
+                  className="w-full bg-white border border-zinc-200/80 focus:border-emerald-300 rounded-xl px-4 py-3.5 text-xs font-bold focus:outline-none pr-14 shadow-sm transition-all placeholder:text-zinc-300 focus:ring-4 focus:ring-emerald-50"
+                />
+                <button 
+                  type="submit"
+                  className="absolute right-1 top-1 h-10 w-10 rounded-lg bg-[#044e3b] text-white flex items-center justify-center hover:bg-[#033629] active:scale-95 transition-all duration-300 cursor-pointer"
+                >
+                  <Send className="size-4" />
+                </button>
+              </form>
+            )}
           </div>
 
         </div>

@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, GraduationCap, Trophy, Stethoscope, Award, Lightbulb, Compass } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ProgramDetailsModal } from "@/components/ui/program-details-modal";
 
 interface ProgramHighlight {
   text: string;
@@ -181,12 +182,14 @@ export function ProgramsBentoGrid() {
                   </div>
 
                   {/* Explore Link CTA */}
-                  <div className="pt-2 self-start">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors duration-300">
-                      <span>{program.ctaText}</span>
-                      <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    </span>
-                  </div>
+                  <ProgramDetailsModal programId={program.id}>
+                    <div className="pt-2 self-start">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors duration-300">
+                        <span>{program.ctaText}</span>
+                        <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </div>
+                  </ProgramDetailsModal>
                 </div>
 
                 {/* Visual Area */}

@@ -4,6 +4,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
+import { CounselingModal, CounselingVariant } from "@/components/ui/counseling-modal";
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -74,6 +75,7 @@ interface CounselingCardData {
   recommended?: boolean;
   buttonText: string;
   buttonVariant: "default" | "outline";
+  variant: CounselingVariant;
 }
 
 const CARDS_DATA: CounselingCardData[] = [
@@ -87,6 +89,7 @@ const CARDS_DATA: CounselingCardData[] = [
     ],
     buttonText: "Schedule Session",
     buttonVariant: "outline",
+    variant: "student",
   },
   {
     title: "Parent Consultation",
@@ -99,6 +102,7 @@ const CARDS_DATA: CounselingCardData[] = [
     recommended: true,
     buttonText: "Schedule Consultation",
     buttonVariant: "default",
+    variant: "parent",
   },
   {
     title: "Enrollment Support",
@@ -110,6 +114,7 @@ const CARDS_DATA: CounselingCardData[] = [
     ],
     buttonText: "Request Guide Packet",
     buttonVariant: "outline",
+    variant: "enrollment",
   },
 ];
 
@@ -289,18 +294,20 @@ export function PremiumCounselingExperience() {
                 </div>
 
                 <div className="pt-8">
-                  <Button
-                    variant={card.buttonVariant}
-                    size="sm"
-                    className={cn(
-                      "w-full text-xs font-bold py-5 rounded-2xl transition-all duration-300 active:scale-[0.98]",
-                      card.recommended
-                        ? cn("bg-[#044e3b] text-white shadow-sm shadow-[#044e3b]/10", hasHover && "hover:bg-[#033629]")
-                        : cn("border-[#044e3b] text-[#044e3b]", hasHover && "hover:bg-emerald-50/50")
-                    )}
-                  >
-                    {card.buttonText}
-                  </Button>
+                  <CounselingModal variant={card.variant}>
+                    <Button
+                      variant={card.buttonVariant}
+                      size="sm"
+                      className={cn(
+                        "w-full text-xs font-bold py-5 rounded-2xl transition-all duration-300 active:scale-[0.98]",
+                        card.recommended
+                          ? cn("bg-[#044e3b] text-white shadow-sm shadow-[#044e3b]/10", hasHover && "hover:bg-[#033629]")
+                          : cn("border-[#044e3b] text-[#044e3b]", hasHover && "hover:bg-emerald-50/50")
+                      )}
+                    >
+                      {card.buttonText}
+                    </Button>
+                  </CounselingModal>
                 </div>
               </Card>
             </TimelineContent>

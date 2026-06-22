@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { CampusVisitModal } from "@/components/ui/campus-visit-modal";
 import { 
   Trophy, 
   TrendingUp, 
@@ -101,15 +102,13 @@ export function Hero() {
         {/* Centered CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
           {/* Primary Button - Solid Emerald Green Capsule */}
-          <button
-            onClick={() => {
-              const el = document.getElementById("admissions");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-[0_4px_14px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_20px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
-          >
-            Book Campus Visit
-          </button>
+          <CampusVisitModal>
+            <button
+              className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-[0_4px_14px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_20px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
+            >
+              Book Campus Visit
+            </button>
+          </CampusVisitModal>
 
           {/* Secondary Button - Sage Outline Capsule */}
           <button
