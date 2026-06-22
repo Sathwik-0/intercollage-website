@@ -150,7 +150,7 @@ export function PremiumCounselingExperience() {
 
   return (
     <section
-      id="counseling-experience"
+      id="admissions"
       className="relative py-20 md:py-28 px-4 bg-white border-t border-emerald-100/30 scroll-mt-28 overflow-hidden"
       ref={containerRef}
     >

@@ -58,7 +58,7 @@ export function CampusExperience() {
 
   return (
     <section
-      id="campus-experience"
+      id="campus"
       className="relative py-20 md:py-28 px-4 bg-[#f4faf6] border-t border-emerald-100/50 scroll-mt-28 overflow-hidden"
       ref={sectionRef}
     >

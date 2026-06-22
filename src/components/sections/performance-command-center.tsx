@@ -164,7 +164,7 @@ export function PerformanceCommandCenter() {
   return (
     <section 
       ref={sectionRef}
-      id="performance-center" 
+      id="results" 
       className="relative w-full py-20 md:py-28 px-6 bg-transparent overflow-hidden scroll-mt-28"
     >
       {/* Background Grid Accent */}

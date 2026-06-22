@@ -105,7 +105,7 @@ export function TransformationStories() {
 
   return (
     <section 
-      id="transformation-stories" 
+      id="success-stories" 
       className="relative w-full py-20 md:py-28 px-6 bg-transparent overflow-hidden scroll-mt-28"
       ref={containerRef}
     >

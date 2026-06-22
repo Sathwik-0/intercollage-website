@@ -80,7 +80,7 @@ export function FacultyExcellence() {
 
   return (
     <section 
-      id="faculty-excellence" 
+      id="faculty" 
       className="relative w-full py-20 md:py-28 bg-transparent overflow-hidden scroll-mt-28"
     >
       {/* Background Subtle Grid Overlay */}

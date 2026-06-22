@@ -118,7 +118,7 @@ const PROGRAMS: Program[] = [
 export function ProgramsBentoGrid() {
   return (
     <section 
-      id="programs-bento" 
+      id="programs" 
       className="relative w-full py-20 md:py-28 px-6 bg-transparent overflow-hidden scroll-mt-28"
     >
       {/* Background Subtle Grid */}

@@ -70,7 +70,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center pt-36 pb-24 px-6 overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen flex flex-col items-center pt-36 pb-24 px-6 overflow-hidden">
       
       {/* Background Subtle Hex/Grid effect */}
       <div className="absolute inset-0 z-0 bg-grid-lines pointer-events-none opacity-50" />

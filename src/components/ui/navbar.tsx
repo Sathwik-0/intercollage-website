@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { cn } from "@/lib/utils";
 import { Phone, Calendar, Menu, X } from "lucide-react";
 import { GlassEffect } from "./liquid-glass";
+import { CampusVisitDialog } from "@/components/ui/campus-visit-dialog";
 
 /* Hallmark · component: navbar · genre: modern-minimal · theme: light-green
  * states: default · hover · focus · active · disabled · loading · error · success
@@ -48,11 +49,49 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
     { id: "programs", label: "Programs" },
     { id: "faculty", label: "Faculty" },
     { id: "campus", label: "Campus" },
-    { id: "stories", label: "Success Stories" },
+    { id: "success-stories", label: "Success Stories" },
     { id: "admissions", label: "Admissions" },
   ];
 
+  // Active section tracking via scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = "home";
+      let maxTop = -Infinity;
+      
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          // Detect if section is near the top of the viewport
+          const sectionTop = section.getBoundingClientRect().top;
+          // Find the section closest to the top of the viewport (max top <= 150)
+          if (sectionTop <= 150 && sectionTop > maxTop) {
+            maxTop = sectionTop;
+            current = item.id;
+          }
+        }
+      });
+      
+      // Force last item if we are at the absolute bottom of the page
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        current = "admissions";
+      }
+      
+      if (current && current !== activeSection && onNavClick) {
+        onNavClick(current);
+      }
+    };
+
+    // Add passive listener for better scroll performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection, onNavClick]);
+
   const handleItemClick = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
     if (onNavClick) onNavClick(id);
     setMobileMenuOpen(false);
   };
@@ -148,7 +187,7 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
                     <motion.span
                       layoutId="activeNavIndicator"
                       className="absolute inset-0 bg-[#044e3b] rounded-full z-0 shadow-sm"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 35, mass: 0.8 }}
                     />
                   )}
                   <span className="relative z-10">{item.label}</span>
@@ -171,12 +210,13 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             </a>
 
             {/* Primary CTA: Book Campus Visit (Solid Emerald Green Capsule) */}
-            <button
-              onClick={() => handleItemClick("admissions")}
-              className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-xs font-bold tracking-wide px-5 py-2.5 transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_16px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer"
-            >
-              Book Campus Visit
-            </button>
+            <CampusVisitDialog>
+              <button
+                className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-xs font-bold tracking-wide px-5 py-2.5 transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_16px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer"
+              >
+                Book Campus Visit
+              </button>
+            </CampusVisitDialog>
           </div>
 
           {/* Hamburger Trigger (Mobile) */}
@@ -245,12 +285,13 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
                   Call Counselor
                 </a>
                 
-                <button
-                  onClick={() => handleItemClick("admissions")}
-                  className="rounded-xl bg-[#044e3b] hover:bg-[#03382a] text-white py-3.5 text-xs font-bold tracking-wide transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] cursor-pointer"
-                >
-                  Book Campus Visit
-                </button>
+                <CampusVisitDialog>
+                  <button
+                    className="w-full rounded-xl bg-[#044e3b] hover:bg-[#03382a] text-white py-3.5 text-xs font-bold tracking-wide transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] cursor-pointer"
+                  >
+                    Book Campus Visit
+                  </button>
+                </CampusVisitDialog>
               </div>
             </div>
           </motion.div>
