@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "The digital headquarters of Hyderabad's elite educational institution. Preparing future leaders for JEE, NEET, and EAMCET with unmatched academic rigour and proven top ranks.",
 };
 
+import { FutureMapAILazy } from "@/components/FutureMapAILazy";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,6 +35,7 @@ export default function RootLayout({
       <body className="min-h-full bg-background text-foreground font-sans flex flex-col">
         <MotionConfig reducedMotion="user">
           {children}
+          <FutureMapAILazy />
         </MotionConfig>
       </body>
     </html>
