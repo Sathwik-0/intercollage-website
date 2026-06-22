@@ -56,7 +56,7 @@ export function VoiceInput({
   return (
     <div className={cn("flex flex-col items-center justify-center pointer-events-none", className)}>
       <motion.div
-        className="flex p-2 border items-center justify-center rounded-full bg-background shadow-md border-emerald-100"
+        className="flex p-2 border items-center justify-center rounded-full bg-background shadow-md border-brand-100"
         layout
         transition={{
           layout: {
@@ -65,10 +65,10 @@ export function VoiceInput({
         }}
         onClick={onClickHandler}
       >
-        <div className="h-6 w-6 items-center justify-center flex text-emerald-600">
+        <div className="h-6 w-6 items-center justify-center flex text-brand-600">
           {_listening ? (
             <motion.div
-              className="w-4 h-4 bg-emerald-600 rounded-sm"
+              className="w-4 h-4 bg-brand-600 rounded-sm"
               animate={{
                 rotate: [0, 180, 360],
               }}
@@ -79,7 +79,7 @@ export function VoiceInput({
               }}
             />
           ) : (
-            <Mic className="w-5 h-5 text-emerald-600" />
+            <Mic className="w-5 h-5 text-brand-600" />
           )}
         </div>
         <AnimatePresence mode="wait">
@@ -98,7 +98,7 @@ export function VoiceInput({
                 {[...Array(12)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="w-0.5 bg-emerald-600 rounded-full"
+                    className="w-0.5 bg-brand-600 rounded-full"
                     initial={{ height: 2 }}
                     animate={{
                       height: _listening
@@ -115,7 +115,7 @@ export function VoiceInput({
                 ))}
               </div>
               {/* Timer */}
-              <div className="text-xs text-emerald-600 font-medium w-10 text-center">
+              <div className="text-xs text-brand-600 font-medium w-10 text-center">
                 {formatTime(_time)}
               </div>
             </motion.div>

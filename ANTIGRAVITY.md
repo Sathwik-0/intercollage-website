@@ -23,7 +23,7 @@ This file documents the core commands and design rules for building the digital 
 - **[FROZEN] Transformation Stories CTA:** The "Schedule Free Counseling" card functionality inside `src/components/sections/transformation-stories.tsx` is completely locked. Its integration with `counseling-modal.tsx` is approved and must not be touched.
 - **[FROZEN] Navbar Navigation System:** The `src/components/ui/navbar.tsx` active state tracking logic, smooth scrolling integration, and the IDs mapped across all 7 main sections are completely locked and functionally approved. They must absolutely NEVER be modified.
 - **[FROZEN] Navbar CTAs (Desktop & Mobile):** The "Book Campus Visit" buttons inside the navbar and their unmount-safe integration with `CampusVisitDialog` are 100% complete and functionally approved. They must never be altered or refactored.
-
+- **[FROZEN] FutureMap AI Advisor:** The `FutureMapAI` floating dock system, its right-edge CSS alignment, lazy loading logic, and z-index overlap fixes are completely locked and functionally approved. They must absolutely NEVER be modified or redesigned.
 ---
 
 ## Coding Guidelines & Design Rules (Hallmark + UI/UX Pro Max)

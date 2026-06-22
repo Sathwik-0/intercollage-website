@@ -225,9 +225,9 @@ function PhotoCard({
       }}
       style={{ willChange: "transform, opacity" }}
       className={cn(
-        'overflow-hidden rounded-2xl cursor-pointer flex-shrink-0 transition-all duration-400 border border-emerald-100/50 bg-emerald-950/5',
+        'overflow-hidden rounded-2xl cursor-pointer flex-shrink-0 transition-all duration-400 border border-brand-100/50 bg-brand-950/5',
         className,
-        isActive ? 'border-emerald-400 shadow-md shadow-emerald-700/5 -translate-y-0.5' : '',
+        isActive ? 'border-brand-400 shadow-md shadow-brand-700/5 -translate-y-0.5' : '',
       )}
       onMouseEnter={() => hasHover && onHover(member.id)}
       onMouseLeave={() => hasHover && onHover(null)}
@@ -283,7 +283,7 @@ function MemberRow({
       }}
       style={{ willChange: "transform, opacity" }}
       className={cn(
-        'cursor-pointer border-b border-emerald-50/50 py-3.5 transition-all duration-300',
+        'cursor-pointer border-b border-brand-50/50 py-3.5 transition-all duration-300',
       )}
       onMouseEnter={() => hasHover && onHover(member.id)}
       onMouseLeave={() => hasHover && onHover(null)}
@@ -295,13 +295,13 @@ function MemberRow({
           <span
             className={cn(
               'w-4 h-1.5 rounded-[5px] flex-shrink-0 transition-all duration-300',
-              isActive ? 'bg-emerald-600 w-6' : 'bg-emerald-100',
+              isActive ? 'bg-brand-600 w-6' : 'bg-brand-100',
             )}
           />
           <span
             className={cn(
               'text-[15px] sm:text-base font-bold tracking-tight transition-colors duration-300',
-              isActive ? 'text-emerald-950' : 'text-zinc-700',
+              isActive ? 'text-brand-950' : 'text-zinc-700',
             )}
           >
             {member.name}
@@ -310,14 +310,14 @@ function MemberRow({
         
         {/* Rank tag */}
         <span className={`text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-md tracking-wider transition-all duration-300 ${
-          isActive ? "bg-[#e6f4ea] text-[#044e3b]" : "bg-zinc-50 text-zinc-500"
+          isActive ? "bg-[#e6f4ea] text-brand-950" : "bg-zinc-50 text-zinc-500"
         }`}>
           {member.rank}
         </span>
       </div>
 
       {/* Exam sub-header */}
-      <p className="mt-1 pl-[27px] text-[9px] font-bold uppercase tracking-wider text-emerald-800/60 leading-none">
+      <p className="mt-1 pl-[27px] text-[9px] font-bold uppercase tracking-wider text-brand-800/60 leading-none">
         {member.exam}
       </p>
 
@@ -330,11 +330,11 @@ function MemberRow({
           <div className="grid grid-cols-2 gap-4">
             <div>
               <span className="text-[8px] font-extrabold text-zinc-400 uppercase tracking-widest block leading-none mb-1">Academic Score</span>
-              <span className="text-emerald-950 font-bold text-xs">{member.percentile}</span>
+              <span className="text-brand-950 font-bold text-xs">{member.percentile}</span>
             </div>
             <div>
               <span className="text-[8px] font-extrabold text-zinc-400 uppercase tracking-widest block leading-none mb-1">Placement Outcome</span>
-              <span className="text-emerald-950 font-bold text-xs">{member.placement}</span>
+              <span className="text-brand-950 font-bold text-xs">{member.placement}</span>
             </div>
           </div>
 
@@ -345,8 +345,8 @@ function MemberRow({
             </div>
             <div className="flex flex-wrap gap-1 items-center">
               {member.badges.map((b) => (
-                <span key={b} className="inline-flex items-center gap-0.5 rounded bg-[#e6f4ea] border border-emerald-100/50 px-1.5 py-0.5 text-[8px] font-bold text-[#044e3b]">
-                  <ShieldCheck className="size-2 text-emerald-600 inline-block mr-0.5" />
+                <span key={b} className="inline-flex items-center gap-0.5 rounded bg-[#e6f4ea] border border-brand-100/50 px-1.5 py-0.5 text-[8px] font-bold text-brand-950">
+                  <ShieldCheck className="size-2 text-brand-600 inline-block mr-0.5" />
                   {b}
                 </span>
               ))}

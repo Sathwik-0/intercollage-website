@@ -151,7 +151,7 @@ export function PremiumCounselingExperience() {
   return (
     <section
       id="admissions"
-      className="relative py-20 md:py-28 px-4 bg-white border-t border-emerald-100/30 scroll-mt-28 overflow-hidden"
+      className="relative py-20 md:py-28 px-4 bg-white border-t border-brand-100/30 scroll-mt-28 overflow-hidden"
       ref={containerRef}
     >
       {/* Background Subtle Grid Overlay */}
@@ -161,8 +161,8 @@ export function PremiumCounselingExperience() {
         
         {/* Header Block */}
         <div className="max-w-3xl mx-auto px-6 space-y-4 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-[0.18em]">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-brand-950 uppercase tracking-[0.18em]">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>PERSONALIZED ADMISSION GUIDANCE</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -189,10 +189,10 @@ export function PremiumCounselingExperience() {
         {/* Process Flow Timelines */}
         <div className="max-w-5xl mx-auto w-full relative">
           {/* Connecting line for desktop */}
-          <div className="absolute top-[28px] left-[12.5%] right-[12.5%] h-0.5 border-t border-dashed border-emerald-200 pointer-events-none z-0 hidden md:block" />
+          <div className="absolute top-[28px] left-[12.5%] right-[12.5%] h-0.5 border-t border-dashed border-brand-200 pointer-events-none z-0 hidden md:block" />
           
           {/* Connecting line for mobile */}
-          <div className="absolute left-[28px] top-8 bottom-8 w-0.5 border-l border-dashed border-emerald-200 pointer-events-none z-0 block md:hidden" />
+          <div className="absolute left-[28px] top-8 bottom-8 w-0.5 border-l border-dashed border-brand-200 pointer-events-none z-0 block md:hidden" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
             {STEPS_DATA.map((step, idx) => {
@@ -207,11 +207,11 @@ export function PremiumCounselingExperience() {
                   className="flex md:flex-col gap-4 md:gap-0 items-start text-left"
                 >
                   {/* Step Number Circle */}
-                  <div className="size-14 rounded-2xl bg-white border border-emerald-100 flex flex-col items-center justify-center flex-shrink-0 z-10 shadow-sm md:mb-5 group hover:border-emerald-300 transition-colors duration-300">
-                    <span className="text-[9px] font-extrabold text-emerald-800 tracking-wider leading-none mb-1">
+                  <div className="size-14 rounded-2xl bg-white border border-brand-100 flex flex-col items-center justify-center flex-shrink-0 z-10 shadow-sm md:mb-5 group hover:border-brand-300 transition-colors duration-300">
+                    <span className="text-[9px] font-extrabold text-brand-800 tracking-wider leading-none mb-1">
                       STEP {step.step}
                     </span>
-                    <IconComponent className="size-4.5 text-[#044e3b]" />
+                    <IconComponent className="size-4.5 text-brand-950" />
                   </div>
 
                   {/* Step Text Info */}
@@ -227,8 +227,8 @@ export function PremiumCounselingExperience() {
                     <ul className="space-y-1.5 pt-1">
                       {step.benefits.map((benefit) => (
                         <li key={benefit} className="flex items-center gap-2">
-                          <span className="size-3.5 rounded-full bg-[#e6f4ea] flex items-center justify-center text-[#044e3b] flex-shrink-0">
-                            <CheckCheck className="size-2 text-[#044e3b]" />
+                          <span className="size-3.5 rounded-full bg-[#e6f4ea] flex items-center justify-center text-brand-950 flex-shrink-0">
+                            <CheckCheck className="size-2 text-brand-950" />
                           </span>
                           <span className="text-[10px] font-bold text-zinc-600 leading-none">
                             {benefit}
@@ -257,17 +257,17 @@ export function PremiumCounselingExperience() {
               <Card
                 className={`relative h-full flex flex-col justify-between border rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
                   card.recommended
-                    ? "border-emerald-500 bg-[#e6f4ea]/10 ring-2 ring-emerald-500/20 shadow-md scale-[1.02]"
+                    ? "border-brand-500 bg-[#e6f4ea]/10 ring-2 ring-brand-500/20 shadow-md scale-[1.02]"
                     : "border-neutral-200 bg-white shadow-sm hover:shadow-md hover:border-neutral-300"
                 }`}
               >
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-lg font-black text-emerald-950 tracking-tight">
+                    <h3 className="text-lg font-black text-brand-950 tracking-tight">
                       {card.title}
                     </h3>
                     {card.recommended && (
-                      <span className="bg-[#044e3b] text-white px-2.5 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wider">
+                      <span className="bg-brand-950 text-white px-2.5 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wider">
                         Recommended
                       </span>
                     )}
@@ -283,8 +283,8 @@ export function PremiumCounselingExperience() {
                     <ul className="space-y-2.5">
                       {card.highlights.map((highlight) => (
                         <li key={highlight} className="flex items-center gap-2">
-                          <CheckCheck className="size-4 text-emerald-600 flex-shrink-0" />
-                          <span className="text-xs font-bold text-emerald-950/80 leading-none">
+                          <CheckCheck className="size-4 text-brand-600 flex-shrink-0" />
+                          <span className="text-xs font-bold text-brand-950/80 leading-none">
                             {highlight}
                           </span>
                         </li>
@@ -301,8 +301,8 @@ export function PremiumCounselingExperience() {
                       className={cn(
                         "w-full text-xs font-bold py-5 rounded-2xl transition-all duration-300 active:scale-[0.98]",
                         card.recommended
-                          ? cn("bg-[#044e3b] text-white shadow-sm shadow-[#044e3b]/10", hasHover && "hover:bg-[#033629]")
-                          : cn("border-[#044e3b] text-[#044e3b]", hasHover && "hover:bg-emerald-50/50")
+                          ? cn("bg-brand-950 text-white shadow-sm shadow-brand-950/10", hasHover && "hover:bg-[#033629]")
+                          : cn("border-brand-950 text-brand-950", hasHover && "hover:bg-brand-50/50")
                       )}
                     >
                       {card.buttonText}
@@ -322,10 +322,10 @@ export function PremiumCounselingExperience() {
           customVariants={revealVariants}
           className="max-w-5xl mx-auto w-full"
         >
-          <div className="border border-emerald-100/50 bg-[#fbfdfc]/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-0 justify-between border-l-4 border-l-[#044e3b]">
+          <div className="border border-brand-100/50 bg-[#fbfdfc]/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-0 justify-between border-l-4 border-l-brand-950">
             <div className="text-center md:text-left space-y-1">
               <h3 className="text-sm font-black text-[#04241a] uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
-                <Sparkles className="size-4 text-emerald-600" />
+                <Sparkles className="size-4 text-brand-600" />
                 Counseling Availability Dashboard
               </h3>
               <p className="text-xs font-bold text-zinc-400">
@@ -343,9 +343,9 @@ export function PremiumCounselingExperience() {
               ].map((item) => (
                 <span 
                   key={item} 
-                  className="inline-flex items-center gap-1.5 rounded-full bg-[#e6f4ea] border border-emerald-100/50 px-3 py-1 text-[9px] font-bold text-[#044e3b]"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-[#e6f4ea] border border-brand-100/50 px-3 py-1 text-[9px] font-bold text-brand-950"
                 >
-                  <CheckCircle2 className="size-3 text-emerald-600" />
+                  <CheckCircle2 className="size-3 text-brand-600" />
                   {item}
                 </span>
               ))}
@@ -355,7 +355,7 @@ export function PremiumCounselingExperience() {
               <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none mb-1 block">
                 Last Updated
               </span>
-              <span className="text-[11px] font-black text-[#044e3b] tracking-wider uppercase leading-none">
+              <span className="text-[11px] font-black text-brand-950 tracking-wider uppercase leading-none">
                 Today
               </span>
             </div>

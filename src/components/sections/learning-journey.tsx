@@ -112,30 +112,30 @@ export function LearningJourney() {
       >
         <div className={`relative w-28 h-20 lg:w-36 lg:h-24 rounded-xl flex flex-col justify-between p-2 lg:p-3 border transition-all duration-500 shadow-sm ${
           isStepActive 
-            ? "border-emerald-200 bg-white shadow-[0_6px_20px_rgba(4,78,59,0.04)]" 
-            : "border-zinc-100 bg-zinc-50/50 hover:border-emerald-100 hover:bg-white"
+            ? "border-brand-200 bg-white shadow-[0_6px_20px_rgba(4,78,59,0.04)]" 
+            : "border-zinc-100 bg-zinc-50/50 hover:border-brand-100 hover:bg-white"
         }`}>
           {/* Top Row: Step Number & Icon */}
           <div className="flex justify-between items-center w-full">
             <span className={`text-[8px] font-extrabold px-1 py-0.5 rounded transition-colors ${
-              isStepActive ? "bg-emerald-50 text-emerald-800" : "bg-zinc-100 text-zinc-500"
+              isStepActive ? "bg-brand-50 text-brand-800" : "bg-zinc-100 text-zinc-500"
             }`}>
               {step.stepNum}
             </span>
             <Icon className={`size-3 lg:size-3.5 transition-colors duration-300 ${
-              isStepActive ? "text-emerald-700" : "text-zinc-400"
+              isStepActive ? "text-brand-700" : "text-zinc-400"
             }`} />
           </div>
 
           {/* Bottom Title */}
           <div className="text-left w-full mt-1">
             <span className={`text-[7px] font-bold uppercase tracking-wider block ${
-              isStepActive ? "text-emerald-950/60" : "text-zinc-400"
+              isStepActive ? "text-brand-950/60" : "text-zinc-400"
             }`}>
               {step.label}
             </span>
             <h4 className={`text-[9px] lg:text-xs font-extrabold tracking-tight mt-0.5 leading-tight ${
-              isStepActive ? "text-emerald-900" : "text-zinc-700"
+              isStepActive ? "text-brand-900" : "text-zinc-700"
             }`}>
               {step.title}
             </h4>
@@ -188,7 +188,7 @@ export function LearningJourney() {
   return (
     <section
       id="learning-journey"
-      className="relative py-20 md:py-28 px-4 bg-white border-t border-emerald-100/30 scroll-mt-28 overflow-hidden"
+      className="relative py-20 md:py-28 px-4 bg-white border-t border-brand-100/30 scroll-mt-28 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background Grid Lines Overlay */}
@@ -198,8 +198,8 @@ export function LearningJourney() {
         
         {/* Header Block */}
         <div className="max-w-3xl mx-auto px-6 space-y-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-[0.18em]">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-brand-950 uppercase tracking-[0.18em]">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>Success Path™</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -231,11 +231,11 @@ export function LearningJourney() {
             emphasizeActiveTrail={true}
             labelAngle={0}
             gapClassName="justify-between w-full px-4"
-            lineColorClass="bg-emerald-50 border-y border-emerald-100/50"
+            lineColorClass="bg-brand-50 border-y border-brand-100/50"
             lineThickness={8}
-            dotClass="bg-white border-2 border-emerald-100 hover:border-emerald-300 shadow-sm cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300"
-            dotActiveClass="bg-emerald-700 ring-4 ring-emerald-500/25 hover:ring-emerald-500/40 cursor-pointer shadow-md shadow-emerald-900/10 hover:scale-110 active:scale-95 transition-all duration-300"
-            activeTrailClass="bg-gradient-to-r from-emerald-500 to-emerald-700 shadow-sm shadow-emerald-500/10"
+            dotClass="bg-white border-2 border-brand-100 hover:border-brand-300 shadow-sm cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300"
+            dotActiveClass="bg-brand-700 ring-4 ring-brand-500/25 hover:ring-brand-500/40 cursor-pointer shadow-md shadow-brand-900/10 hover:scale-110 active:scale-95 transition-all duration-300"
+            activeTrailClass="bg-gradient-to-r from-brand-500 to-brand-700 shadow-sm shadow-brand-500/10"
             renderLabel={renderLabel}
             renderCaption={renderCaption}
             itemClassName="shrink-0 w-28 lg:w-36 flex flex-col items-center"
@@ -248,10 +248,10 @@ export function LearningJourney() {
         {/* Mobile Vertical Timeline (Visible on mobile, hidden on desktop) */}
         <div className="relative md:hidden w-full max-w-md mx-auto px-4 py-8 select-none">
           {/* Vertical Progress Rail */}
-          <div className="absolute left-6 top-10 bottom-10 w-1.5 bg-emerald-50 rounded-full">
+          <div className="absolute left-6 top-10 bottom-10 w-1.5 bg-brand-50 rounded-full">
             {/* Active Vertical Trail */}
             <div 
-              className="absolute top-0 left-0 w-full rounded-full bg-gradient-to-b from-emerald-500 to-emerald-700 transition-all duration-500 shadow-sm"
+              className="absolute top-0 left-0 w-full rounded-full bg-gradient-to-b from-brand-500 to-brand-700 transition-all duration-500 shadow-sm"
               style={{
                 height: `${(activeStepIndex / (STEPS.length - 1)) * 100}%`,
               }}
@@ -274,11 +274,11 @@ export function LearningJourney() {
                   <div className="relative flex items-center justify-center pt-2">
                     <div className={`size-5 rounded-full border-2 transition-all duration-300 flex items-center justify-center ${
                       isStepActive 
-                        ? "bg-emerald-700 border-emerald-500 ring-4 ring-emerald-500/20 shadow-md scale-110" 
-                        : "bg-white border-emerald-100 shadow-sm"
+                        ? "bg-brand-700 border-brand-500 ring-4 ring-brand-500/20 shadow-md scale-110" 
+                        : "bg-white border-brand-100 shadow-sm"
                     }`}>
                       <div className={`size-1.5 rounded-full ${
-                        isStepActive ? "bg-white" : "bg-emerald-100"
+                        isStepActive ? "bg-white" : "bg-brand-100"
                       }`} />
                     </div>
                   </div>
@@ -286,31 +286,31 @@ export function LearningJourney() {
                   {/* Milestone Card */}
                   <div className={`flex-1 rounded-xl p-3 border transition-all duration-500 text-left ${
                     isStepActive 
-                      ? "border-emerald-200 bg-white shadow-[0_6px_20px_rgba(4,78,59,0.04)]" 
-                      : "border-zinc-100 bg-zinc-50/50 hover:border-emerald-100 hover:bg-white"
+                      ? "border-brand-200 bg-white shadow-[0_6px_20px_rgba(4,78,59,0.04)]" 
+                      : "border-zinc-100 bg-zinc-50/50 hover:border-brand-100 hover:bg-white"
                   }`}>
                     {/* Header */}
                     <div className="flex justify-between items-center w-full mb-1">
                       <div className="flex items-center gap-1.5">
                         <span className={`text-[8px] font-extrabold px-1.5 py-0.5 rounded transition-colors ${
-                          isStepActive ? "bg-emerald-50 text-emerald-800" : "bg-zinc-100 text-zinc-500"
+                          isStepActive ? "bg-brand-50 text-brand-800" : "bg-zinc-100 text-zinc-500"
                         }`}>
                           {step.stepNum}
                         </span>
                         <span className={`text-[8px] font-bold uppercase tracking-wider ${
-                          isStepActive ? "text-emerald-950/60" : "text-zinc-400"
+                          isStepActive ? "text-brand-950/60" : "text-zinc-400"
                         }`}>
                           {step.label}
                         </span>
                       </div>
                       <Icon className={`size-3.5 transition-colors duration-300 ${
-                        isStepActive ? "text-emerald-700" : "text-zinc-400"
+                        isStepActive ? "text-brand-700" : "text-zinc-400"
                       }`} />
                     </div>
 
                     {/* Content */}
                     <h4 className={`text-xs font-extrabold tracking-tight transition-colors duration-300 ${
-                      isStepActive ? "text-emerald-900" : "text-zinc-700"
+                      isStepActive ? "text-brand-900" : "text-zinc-700"
                     }`}>
                       {step.title}
                     </h4>

@@ -173,13 +173,13 @@ export function FutureMapAI() {
       {/* Chat Messages Area */}
       {messages.length > 0 && (
         <div 
-          className="bg-white/95 backdrop-blur-md border border-emerald-100 shadow-[0_20px_40px_-15px_rgba(4,78,59,0.2)] rounded-3xl p-4 w-[380px] max-h-[60vh] flex flex-col mb-4 mr-4 pointer-events-auto max-sm:w-[calc(100%-2rem)] max-sm:mr-0 max-sm:mx-auto transition-all animate-in slide-in-from-bottom-8 fade-in"
+          className="bg-white/95 backdrop-blur-md border border-brand-100 shadow-[0_20px_40px_-15px_rgba(4,78,59,0.2)] rounded-3xl p-4 w-[380px] max-h-[60vh] flex flex-col mb-4 mr-4 pointer-events-auto max-sm:w-[calc(100%-2rem)] max-sm:mr-0 max-sm:mx-auto transition-all animate-in slide-in-from-bottom-8 fade-in"
         >
           {/* Header */}
-          <div className="flex items-center justify-between pb-3 border-b border-emerald-50 mb-3 shrink-0">
+          <div className="flex items-center justify-between pb-3 border-b border-brand-50 mb-3 shrink-0">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <h3 className="font-bold text-[#044e3b] text-sm tracking-tight">FutureMap AI Advisor</h3>
+              <div className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
+              <h3 className="font-bold text-brand-950 text-sm tracking-tight">FutureMap AI Advisor</h3>
             </div>
             
             {/* The Speaking Visualizer & Close Button */}
@@ -206,7 +206,7 @@ export function FutureMapAI() {
                 <div className={cn(
                   "px-3.5 py-2.5 max-w-[85%] rounded-2xl text-[14px] leading-relaxed shadow-sm",
                   msg.role === "user" 
-                    ? "bg-[#044e3b] text-white rounded-br-sm" 
+                    ? "bg-brand-950 text-white rounded-br-sm" 
                     : "bg-zinc-50 border border-zinc-100 text-zinc-800 rounded-bl-sm"
                 )}>
                   {msg.role === "user" ? (
@@ -216,14 +216,14 @@ export function FutureMapAI() {
                       <div>{msg.content.replace("[CTA:CAMPUS_VISIT]", "").replace("[CTA:INQUIRY]", "")}</div>
                       {msg.content.includes("[CTA:CAMPUS_VISIT]") && (
                         <CampusVisitDialog>
-                          <button className="w-full py-2 px-4 bg-emerald-600 text-white rounded-xl text-sm font-semibold hover:bg-emerald-700 transition-colors shadow-md text-center">
+                          <button className="w-full py-2 px-4 bg-brand-600 text-white rounded-xl text-sm font-semibold hover:bg-brand-700 transition-colors shadow-md text-center">
                             Book Campus Visit
                           </button>
                         </CampusVisitDialog>
                       )}
                       {msg.content.includes("[CTA:INQUIRY]") && (
                         <CounselingModal variant="enrollment">
-                          <button className="w-full py-2 px-4 bg-[#044e3b] text-white rounded-xl text-sm font-semibold hover:bg-emerald-900 transition-colors shadow-md text-center">
+                          <button className="w-full py-2 px-4 bg-brand-950 text-white rounded-xl text-sm font-semibold hover:bg-brand-900 transition-colors shadow-md text-center">
                             Schedule Counseling
                           </button>
                         </CounselingModal>
@@ -237,9 +237,9 @@ export function FutureMapAI() {
             {isTyping && (
               <div className="flex w-full justify-start animate-in fade-in">
                 <div className="px-4 py-3 bg-zinc-50 border border-zinc-100 rounded-2xl rounded-bl-sm flex items-center gap-1.5 shadow-sm">
-                  <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce" />
-                  <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce delay-75" />
-                  <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce delay-150" />
+                  <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce" />
+                  <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce delay-75" />
+                  <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce delay-150" />
                 </div>
               </div>
             )}

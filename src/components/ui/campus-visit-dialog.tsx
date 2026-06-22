@@ -17,15 +17,15 @@ export function CampusVisitDialog({ children }: { children: React.ReactNode }) {
       </DialogTrigger>
       
       <DialogContent 
-        className="sm:max-w-[900px] w-[95vw] p-0 border border-emerald-500/20 shadow-2xl overflow-hidden bg-white/70 backdrop-blur-3xl rounded-3xl !zoom-in-100 data-open:slide-in-from-bottom-3 duration-300"
+        className="sm:max-w-[900px] w-[95vw] p-0 border border-brand-500/20 shadow-2xl overflow-hidden bg-white/70 backdrop-blur-3xl rounded-3xl !zoom-in-100 data-open:slide-in-from-bottom-3 duration-300"
       >
         <DialogTitle className="sr-only">Schedule Your Campus Visit</DialogTitle>
         <DialogDescription className="sr-only">Experience classrooms, laboratories, academic facilities, and student life firsthand.</DialogDescription>
 
         {isSubmitted ? (
           <div className="flex flex-col items-center justify-center p-12 text-center min-h-[500px]">
-            <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mb-6">
-              <CheckCircle2 className="size-10 text-emerald-600" />
+            <div className="w-20 h-20 rounded-full bg-brand-100 flex items-center justify-center mb-6">
+              <CheckCircle2 className="size-10 text-brand-600" />
             </div>
             <h3 className="text-3xl font-extrabold text-[#04241a] tracking-tight mb-3">
               Visit Request Submitted
@@ -51,26 +51,26 @@ export function CampusVisitDialog({ children }: { children: React.ReactNode }) {
                   <h3 className="text-2xl font-extrabold text-white tracking-tight mb-2">
                     Visit Our Campus
                   </h3>
-                  <p className="text-emerald-100/80 text-sm leading-relaxed font-medium">
+                  <p className="text-brand-100/80 text-sm leading-relaxed font-medium">
                     Explore classrooms, laboratories, academic infrastructure, student facilities, and the learning environment that powers exceptional results.
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-4 border-t border-emerald-500/30">
+                <div className="space-y-3 pt-4 border-t border-brand-500/30">
                   <div className="flex items-center gap-3">
-                    <FlaskConical className="size-4 text-emerald-400" />
+                    <FlaskConical className="size-4 text-brand-400" />
                     <span className="text-sm font-bold text-white tracking-wide">15+ Research Labs</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Library className="size-4 text-emerald-400" />
+                    <Library className="size-4 text-brand-400" />
                     <span className="text-sm font-bold text-white tracking-wide">85,000+ Academic Volumes</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <MonitorPlay className="size-4 text-emerald-400" />
+                    <MonitorPlay className="size-4 text-brand-400" />
                     <span className="text-sm font-bold text-white tracking-wide">Smart Classrooms</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Users className="size-4 text-emerald-400" />
+                    <Users className="size-4 text-brand-400" />
                     <span className="text-sm font-bold text-white tracking-wide">Dedicated IIT & NEET Ecosystem</span>
                   </div>
                 </div>
@@ -92,27 +92,27 @@ export function CampusVisitDialog({ children }: { children: React.ReactNode }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Student Name</Label>
-                    <Input required placeholder="Enter student name" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required placeholder="Enter student name" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Parent Name</Label>
-                    <Input required placeholder="Enter parent name" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required placeholder="Enter parent name" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Mobile Number</Label>
-                    <Input required type="tel" placeholder="+91" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required type="tel" placeholder="+91" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Email Address</Label>
-                    <Input required type="email" placeholder="name@example.com" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required type="email" placeholder="name@example.com" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Current Class</Label>
-                    <Input required placeholder="e.g. 10th, 11th, 12th" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required placeholder="e.g. 10th, 11th, 12th" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Program of Interest</Label>
-                    <select required className="flex h-9 w-full rounded-lg border border-emerald-100 bg-white/80 px-3 py-2 text-sm text-[#04241a] shadow-sm shadow-black/5 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-emerald-500/20">
+                    <select required className="flex h-9 w-full rounded-lg border border-brand-100 bg-white/80 px-3 py-2 text-sm text-[#04241a] shadow-sm shadow-black/5 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand-500/20">
                       <option value="" disabled selected>Select a program</option>
                       <option value="IIT/JEE">IIT / JEE</option>
                       <option value="NEET">NEET</option>
@@ -123,11 +123,11 @@ export function CampusVisitDialog({ children }: { children: React.ReactNode }) {
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Preferred Visit Date</Label>
-                    <Input required type="date" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required type="date" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold text-[#406b5c]">Preferred Visit Time</Label>
-                    <Input required type="time" className="bg-white/80 border-emerald-100 focus-visible:ring-emerald-500/20" />
+                    <Input required type="time" className="bg-white/80 border-brand-100 focus-visible:ring-brand-500/20" />
                   </div>
                 </div>
 
@@ -135,13 +135,13 @@ export function CampusVisitDialog({ children }: { children: React.ReactNode }) {
                   <Label className="text-xs font-bold text-[#406b5c]">Additional Notes</Label>
                   <textarea 
                     placeholder="Any specific facilities you wish to see?"
-                    className="flex min-h-[60px] w-full rounded-lg border border-emerald-100 bg-white/80 px-3 py-2 text-sm text-[#04241a] shadow-sm shadow-black/5 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-emerald-500/20 resize-none"
+                    className="flex min-h-[60px] w-full rounded-lg border border-brand-100 bg-white/80 px-3 py-2 text-sm text-[#04241a] shadow-sm shadow-black/5 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand-500/20 resize-none"
                   />
                 </div>
 
                 <Button 
                   type="submit" 
-                  className="mt-6 w-full h-11 bg-[#044e3b] hover:bg-[#033b2c] text-white font-bold rounded-xl shadow-[0_8px_16px_rgba(4,78,59,0.2)] transition-all hover:-translate-y-px hover:shadow-[0_12px_20px_rgba(4,78,59,0.3)]"
+                  className="mt-6 w-full h-11 bg-brand-950 hover:bg-[#033b2c] text-white font-bold rounded-xl shadow-[0_8px_16px_rgba(4,78,59,0.2)] transition-all hover:-translate-y-px hover:shadow-[0_12px_20px_rgba(4,78,59,0.3)]"
                 >
                   Request Campus Visit
                 </Button>

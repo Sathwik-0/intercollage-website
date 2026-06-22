@@ -33,18 +33,18 @@ export function ProgramDetailsModal({
         and apply the slide and duration classes.
       */}
       <DialogContent 
-        className="sm:max-w-[650px] w-[95vw] p-0 border border-emerald-500/20 shadow-2xl overflow-hidden bg-white/60 backdrop-blur-2xl rounded-3xl !zoom-in-100 data-open:slide-in-from-bottom-3 duration-300"
+        className="sm:max-w-[650px] w-[95vw] p-0 border border-brand-500/20 shadow-2xl overflow-hidden bg-white/60 backdrop-blur-2xl rounded-3xl !zoom-in-100 data-open:slide-in-from-bottom-3 duration-300"
       >
         <DialogTitle className="sr-only">{data.name} Details</DialogTitle>
 
         <div className="flex flex-col max-h-[85vh] overflow-y-auto">
           {/* Header Area */}
           <div className="bg-[#04241a] p-8 md:p-10 relative overflow-hidden shrink-0">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
             <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-2 relative z-10">
               {data.name}
             </h3>
-            <p className="text-emerald-100/80 font-medium text-sm md:text-base max-w-lg relative z-10">
+            <p className="text-brand-100/80 font-medium text-sm md:text-base max-w-lg relative z-10">
               {data.whoItIsFor}
             </p>
           </div>
@@ -54,14 +54,14 @@ export function ProgramDetailsModal({
             
             {/* Key Benefits */}
             <div>
-              <h4 className="text-sm font-bold text-[#044e3b] uppercase tracking-wider mb-4 flex items-center gap-2">
-                <Target className="size-4 text-emerald-600" />
+              <h4 className="text-sm font-bold text-brand-950 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <Target className="size-4 text-brand-600" />
                 Key Benefits
               </h4>
               <ul className="space-y-3">
                 {data.keyBenefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="size-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="size-5 text-brand-600 shrink-0 mt-0.5" />
                     <span className="text-[#406b5c] font-medium leading-relaxed">{benefit}</span>
                   </li>
                 ))}
@@ -71,8 +71,8 @@ export function ProgramDetailsModal({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Teaching Methodology */}
               <div>
-                <h4 className="text-sm font-bold text-[#044e3b] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <BookOpen className="size-4 text-emerald-600" />
+                <h4 className="text-sm font-bold text-brand-950 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <BookOpen className="size-4 text-brand-600" />
                   Methodology
                 </h4>
                 <p className="text-[#406b5c] text-sm leading-relaxed font-medium">
@@ -82,8 +82,8 @@ export function ProgramDetailsModal({
 
               {/* Weekly Schedule */}
               <div>
-                <h4 className="text-sm font-bold text-[#044e3b] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <Calendar className="size-4 text-emerald-600" />
+                <h4 className="text-sm font-bold text-brand-950 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Calendar className="size-4 text-brand-600" />
                   Schedule
                 </h4>
                 <p className="text-[#406b5c] text-sm leading-relaxed font-medium">
@@ -93,8 +93,8 @@ export function ProgramDetailsModal({
 
               {/* Assessment Structure */}
               <div>
-                <h4 className="text-sm font-bold text-[#044e3b] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <BarChart3 className="size-4 text-emerald-600" />
+                <h4 className="text-sm font-bold text-brand-950 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <BarChart3 className="size-4 text-brand-600" />
                   Assessment
                 </h4>
                 <p className="text-[#406b5c] text-sm leading-relaxed font-medium">
@@ -104,8 +104,8 @@ export function ProgramDetailsModal({
 
               {/* Expected Outcomes */}
               <div>
-                <h4 className="text-sm font-bold text-[#044e3b] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <Users className="size-4 text-emerald-600" />
+                <h4 className="text-sm font-bold text-brand-950 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Users className="size-4 text-brand-600" />
                   Outcomes
                 </h4>
                 <p className="text-[#406b5c] text-sm leading-relaxed font-medium">
@@ -115,9 +115,9 @@ export function ProgramDetailsModal({
             </div>
 
             {/* CTA */}
-            <div className="pt-4 border-t border-emerald-100/50">
+            <div className="pt-4 border-t border-brand-100/50">
               <CampusVisitModal>
-                <Button className="w-full h-12 bg-[#044e3b] hover:bg-[#033b2c] text-white font-bold rounded-xl shadow-[0_8px_16px_rgba(4,78,59,0.2)] transition-all hover:-translate-y-px hover:shadow-[0_12px_20px_rgba(4,78,59,0.3)]">
+                <Button className="w-full h-12 bg-brand-950 hover:bg-[#033b2c] text-white font-bold rounded-xl shadow-[0_8px_16px_rgba(4,78,59,0.2)] transition-all hover:-translate-y-px hover:shadow-[0_12px_20px_rgba(4,78,59,0.3)]">
                   Book Campus Visit
                 </Button>
               </CampusVisitModal>

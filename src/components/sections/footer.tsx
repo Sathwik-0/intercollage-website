@@ -99,7 +99,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="relative bg-[#fbfdfc] border-t border-emerald-100/50 pt-16 pb-[calc(2rem+env(safe-area-inset-bottom))] px-4 font-sans select-none">
+    <footer className="relative bg-[#fbfdfc] border-t border-brand-100/50 pt-16 pb-[calc(2rem+env(safe-area-inset-bottom))] px-4 font-sans select-none">
       
       {/* Background Subtle Grid Lines Overlay */}
       <div className="absolute inset-0 z-0 bg-grid-lines pointer-events-none opacity-[0.08]" />
@@ -119,7 +119,7 @@ export function Footer() {
           {/* Column 1: 20% Luxury Brand Details */}
           <div className="space-y-5 text-left">
             <div className="flex items-center gap-2 text-[#04241a]">
-              <Sparkles className="size-4 text-emerald-600 animate-pulse" />
+              <Sparkles className="size-4 text-brand-600 animate-pulse" />
               <span className="text-sm font-black tracking-[0.16em] uppercase">
                 INTER-COLLEGE™
               </span>
@@ -144,7 +144,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className={cn(
                     "size-8 rounded-xl border border-zinc-200/80 bg-white flex items-center justify-center text-zinc-400 transition-all duration-300 shadow-sm",
-                    hasHover && "hover:text-[#044e3b] hover:bg-[#e6f4ea] hover:border-emerald-200"
+                    hasHover && "hover:text-brand-950 hover:bg-[#e6f4ea] hover:border-brand-200"
                   )}
                 >
                   <IconComponent className="size-4" />
@@ -167,7 +167,7 @@ export function Footer() {
                 { label: "Performance Diagnostic Center", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-xs font-bold text-zinc-500 hover:text-[#044e3b] transition-colors duration-300">
+                  <a href={link.href} className="text-xs font-bold text-zinc-500 hover:text-brand-950 transition-colors duration-300">
                     {link.label}
                   </a>
                 </li>
@@ -184,19 +184,19 @@ export function Footer() {
             {/* Contacts Stack */}
             <address className="space-y-3 not-italic">
               <div className="flex items-center gap-2.5 text-xs font-bold text-zinc-500">
-                <Mail className="size-4 text-emerald-600 flex-shrink-0" />
-                <a href="mailto:hello@intercollege.edu.in" className="hover:text-[#044e3b] transition-colors">
+                <Mail className="size-4 text-brand-600 flex-shrink-0" />
+                <a href="mailto:hello@intercollege.edu.in" className="hover:text-brand-950 transition-colors">
                   hello@intercollege.edu.in
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-xs font-bold text-zinc-500">
-                <Phone className="size-4 text-emerald-600 flex-shrink-0" />
-                <a href="tel:+918637373116" className="hover:text-[#044e3b] transition-colors">
+                <Phone className="size-4 text-brand-600 flex-shrink-0" />
+                <a href="tel:+918637373116" className="hover:text-brand-950 transition-colors">
                   +91 86373 73116
                 </a>
               </div>
               <div className="flex items-start gap-2.5 text-xs font-bold text-zinc-500">
-                <MapPin className="size-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <MapPin className="size-4 text-brand-600 flex-shrink-0 mt-0.5" />
                 <span className="leading-tight">
                   Kolkata, West Bengal, India
                 </span>
@@ -204,10 +204,10 @@ export function Footer() {
             </address>
 
             <div className="pt-2 border-t border-zinc-100/50 space-y-2">
-              <a href="#" className="block text-[11px] font-bold text-emerald-700 hover:text-emerald-950 transition-colors">
+              <a href="#" className="block text-[11px] font-bold text-brand-700 hover:text-brand-950 transition-colors">
                 ✓ Booking & Counseling
               </a>
-              <a href="#" className="block text-[11px] font-bold text-emerald-700 hover:text-emerald-950 transition-colors">
+              <a href="#" className="block text-[11px] font-bold text-brand-700 hover:text-brand-950 transition-colors">
                 ✓ Verification Center
               </a>
             </div>
@@ -224,9 +224,9 @@ export function Footer() {
             
             {/* Form */}
             {isSubscribed ? (
-              <div className="relative max-w-[280px] bg-emerald-50 border border-emerald-200/50 rounded-xl px-4 py-3.5 flex items-center gap-3 animate-in fade-in zoom-in-95 duration-300">
-                <Sparkles className="size-4 text-emerald-600" />
-                <span className="text-xs font-bold text-emerald-800">
+              <div className="relative max-w-[280px] bg-brand-50 border border-brand-200/50 rounded-xl px-4 py-3.5 flex items-center gap-3 animate-in fade-in zoom-in-95 duration-300">
+                <Sparkles className="size-4 text-brand-600" />
+                <span className="text-xs font-bold text-brand-800">
                   Successfully subscribed!
                 </span>
               </div>
@@ -242,11 +242,11 @@ export function Footer() {
                   type="email"
                   required
                   placeholder="Enter parent or student email"
-                  className="w-full bg-white border border-zinc-200/80 focus:border-emerald-300 rounded-xl px-4 py-3.5 text-xs font-bold focus:outline-none pr-14 shadow-sm transition-all placeholder:text-zinc-300 focus:ring-4 focus:ring-emerald-50"
+                  className="w-full bg-white border border-zinc-200/80 focus:border-brand-300 rounded-xl px-4 py-3.5 text-xs font-bold focus:outline-none pr-14 shadow-sm transition-all placeholder:text-zinc-300 focus:ring-4 focus:ring-brand-50"
                 />
                 <button 
                   type="submit"
-                  className="absolute right-1 top-1 h-10 w-10 rounded-lg bg-[#044e3b] text-white flex items-center justify-center hover:bg-[#033629] active:scale-95 transition-all duration-300 cursor-pointer"
+                  className="absolute right-1 top-1 h-10 w-10 rounded-lg bg-brand-950 text-white flex items-center justify-center hover:bg-[#033629] active:scale-95 transition-all duration-300 cursor-pointer"
                 >
                   <Send className="size-4" />
                 </button>
@@ -276,15 +276,15 @@ export function Footer() {
 
           {/* Legal link rows divided by Apple style rules (spacious gaps on mobile to avoid mis-taps) */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3.5 md:gap-x-4 md:gap-y-2 text-[10px] font-extrabold uppercase tracking-wider text-zinc-400 border-t border-zinc-100/80 pt-4">
-            <a href="#" className="hover:text-[#044e3b] transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-brand-950 transition-colors">Privacy Policy</a>
             <span className="text-zinc-200">|</span>
-            <a href="#" className="hover:text-[#044e3b] transition-colors">Terms & Conditions</a>
+            <a href="#" className="hover:text-brand-950 transition-colors">Terms & Conditions</a>
             <span className="text-zinc-200">|</span>
-            <a href="#" className="hover:text-[#044e3b] transition-colors">Cookie Notice</a>
+            <a href="#" className="hover:text-brand-950 transition-colors">Cookie Notice</a>
             <span className="text-zinc-200">|</span>
-            <a href="#" className="hover:text-[#044e3b] transition-colors">Trust Center</a>
+            <a href="#" className="hover:text-brand-950 transition-colors">Trust Center</a>
             <span className="text-zinc-200">|</span>
-            <a href="#" className="hover:text-[#044e3b] transition-colors">Transparency Report</a>
+            <a href="#" className="hover:text-brand-950 transition-colors">Transparency Report</a>
           </div>
 
         </div>

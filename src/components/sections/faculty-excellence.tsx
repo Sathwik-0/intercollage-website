@@ -90,8 +90,8 @@ export function FacultyExcellence() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto px-6 space-y-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-[0.18em]">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-brand-950 uppercase tracking-[0.18em]">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>Faculty Excellence™</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -116,9 +116,9 @@ export function FacultyExcellence() {
                 <div
                   key={fac.id}
                   className={cn(
-                    "flex-shrink-0 w-80 rounded-3xl border border-emerald-100/50 bg-white/90 backdrop-blur-xl p-6 shadow-[0_8px_30px_rgba(4,78,59,0.03)] transition-all duration-300 cursor-pointer relative overflow-hidden group select-none",
+                    "flex-shrink-0 w-80 rounded-3xl border border-brand-100/50 bg-white/90 backdrop-blur-xl p-6 shadow-[0_8px_30px_rgba(4,78,59,0.03)] transition-all duration-300 cursor-pointer relative overflow-hidden group select-none",
                     isDimmed ? "opacity-60 scale-98" : "opacity-100",
-                    isActive ? "shadow-[0_12px_40px_rgba(4,78,59,0.08)] -translate-y-1 bg-white border-emerald-200/80" : ""
+                    isActive ? "shadow-[0_12px_40px_rgba(4,78,59,0.08)] -translate-y-1 bg-white border-brand-200/80" : ""
                   )}
                   onMouseEnter={() => setHoveredId(fac.id)}
                   onMouseLeave={() => setHoveredId(null)}
@@ -126,7 +126,7 @@ export function FacultyExcellence() {
                   <div className="flex flex-col space-y-5 h-full">
                     
                     {/* Faculty Photo */}
-                    <div className="relative w-full h-52 rounded-2xl overflow-hidden border border-emerald-100/60 bg-slate-50 shrink-0">
+                    <div className="relative w-full h-52 rounded-2xl overflow-hidden border border-brand-100/60 bg-slate-50 shrink-0">
                       <img
                         src={fac.image}
                         alt={fac.name}
@@ -135,8 +135,8 @@ export function FacultyExcellence() {
                           isActive ? "scale-105" : "grayscale opacity-90"
                         )}
                       />
-                      <div className="absolute top-3 left-3 bg-[#e6f4ea] border border-emerald-200/60 rounded-full px-3 py-1 shadow-sm">
-                        <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-wider block">
+                      <div className="absolute top-3 left-3 bg-[#e6f4ea] border border-brand-200/60 rounded-full px-3 py-1 shadow-sm">
+                        <span className="text-[9px] font-bold text-brand-950 uppercase tracking-wider block">
                           {fac.experience}
                         </span>
                       </div>
@@ -154,9 +154,9 @@ export function FacultyExcellence() {
                       </div>
 
                       {/* Rank Achievement */}
-                      <div className="bg-[#e6f4ea]/40 border border-emerald-100/60 rounded-2xl p-3 flex items-center gap-2.5">
-                        <Trophy className="size-4 text-emerald-600 shrink-0" />
-                        <span className="text-xs font-bold text-[#044e3b]">
+                      <div className="bg-[#e6f4ea]/40 border border-brand-100/60 rounded-2xl p-3 flex items-center gap-2.5">
+                        <Trophy className="size-4 text-brand-600 shrink-0" />
+                        <span className="text-xs font-bold text-brand-950">
                           {fac.rankAchievement}
                         </span>
                       </div>
@@ -166,7 +166,7 @@ export function FacultyExcellence() {
                         {fac.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="inline-flex rounded-full bg-emerald-50/60 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider"
+                            className="inline-flex rounded-full bg-brand-50/60 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider"
                           >
                             {tag}
                           </span>
@@ -184,9 +184,9 @@ export function FacultyExcellence() {
         <div ref={ref} className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch w-full">
           
           {/* Card 1: Experience */}
-          <div className="flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
+          <div className="flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="space-y-4">
-              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-emerald-100 flex items-center justify-center text-[#044e3b]">
+              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-brand-100 flex items-center justify-center text-brand-950">
                 <GraduationCap className="size-5" />
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold text-[#04241a] tracking-tight">
@@ -202,9 +202,9 @@ export function FacultyExcellence() {
           </div>
 
           {/* Card 2: Selections */}
-          <div className="flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
+          <div className="flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="space-y-4">
-              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-emerald-100 flex items-center justify-center text-[#044e3b]">
+              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-brand-100 flex items-center justify-center text-brand-950">
                 <Users className="size-5" />
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold text-[#04241a] tracking-tight">
@@ -220,9 +220,9 @@ export function FacultyExcellence() {
           </div>
 
           {/* Card 3: IIT/NIT */}
-          <div className="flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
+          <div className="flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.06)] hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="space-y-4">
-              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-emerald-100 flex items-center justify-center text-[#044e3b]">
+              <div className="size-10 rounded-xl bg-[#e6f4ea] border border-brand-100 flex items-center justify-center text-brand-950">
                 <Award className="size-5" />
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold text-[#04241a] tracking-tight">
@@ -238,18 +238,18 @@ export function FacultyExcellence() {
           </div>
 
           {/* Card 4: MBBS */}
-          <div className="flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-[#044e3b] text-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.06)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
+          <div className="flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-brand-950 text-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.06)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.12)] hover:-translate-y-0.5 transition-all duration-300 group">
             <div className="space-y-4">
-              <div className="size-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-emerald-300">
+              <div className="size-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-brand-300">
                 <Medal className="size-5" />
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 {inView ? <CountUp start={0} end={1800} duration={2.4} suffix="+" separator="," /> : "0+"}
               </h3>
-              <p className="text-xs font-bold text-emerald-200 uppercase tracking-widest leading-none">
+              <p className="text-xs font-bold text-brand-200 uppercase tracking-widest leading-none">
                 MBBS Admissions
               </p>
-              <p className="text-xs font-medium text-emerald-50 leading-relaxed">
+              <p className="text-xs font-medium text-brand-50 leading-relaxed">
                 Government medical college admissions and AIIMS placements secured by medical aspirants.
               </p>
             </div>
@@ -259,7 +259,7 @@ export function FacultyExcellence() {
 
         {/* Premium Trust Panel */}
         <div className="max-w-7xl mx-auto px-6 w-full animate-in fade-in duration-700">
-          <div className="relative rounded-3xl border border-emerald-100/50 bg-[#e6f4ea] p-8 md:p-10 shadow-[0_8px_30px_rgba(4,78,59,0.03)] overflow-hidden">
+          <div className="relative rounded-3xl border border-brand-100/50 bg-[#e6f4ea] p-8 md:p-10 shadow-[0_8px_30px_rgba(4,78,59,0.03)] overflow-hidden">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#044e3b08_1px,transparent_1px),linear-gradient(to_bottom,#044e3b08_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
             
             <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -273,17 +273,17 @@ export function FacultyExcellence() {
               </div>
 
               <div className="flex flex-wrap md:flex-nowrap gap-3 shrink-0">
-                <div className="flex items-center gap-1.5 rounded-full bg-white border border-emerald-100 px-4 py-1.5">
-                  <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
-                  <span className="text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">JEE Main & Adv</span>
+                <div className="flex items-center gap-1.5 rounded-full bg-white border border-brand-100 px-4 py-1.5">
+                  <CheckCircle2 className="size-4 text-brand-600 shrink-0" />
+                  <span className="text-[10px] font-bold text-brand-950 uppercase tracking-wider">JEE Main & Adv</span>
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white border border-emerald-100 px-4 py-1.5">
-                  <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
-                  <span className="text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">NEET Biology & Prep</span>
+                <div className="flex items-center gap-1.5 rounded-full bg-white border border-brand-100 px-4 py-1.5">
+                  <CheckCircle2 className="size-4 text-brand-600 shrink-0" />
+                  <span className="text-[10px] font-bold text-brand-950 uppercase tracking-wider">NEET Biology & Prep</span>
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white border border-emerald-100 px-4 py-1.5">
-                  <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
-                  <span className="text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">State & CBSE Boards</span>
+                <div className="flex items-center gap-1.5 rounded-full bg-white border border-brand-100 px-4 py-1.5">
+                  <CheckCircle2 className="size-4 text-brand-600 shrink-0" />
+                  <span className="text-[10px] font-bold text-brand-950 uppercase tracking-wider">State & CBSE Boards</span>
                 </div>
               </div>
             </div>

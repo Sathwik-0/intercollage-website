@@ -362,14 +362,14 @@ export function FutureMap() {
         
         {/* Title Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-[#044e3b] uppercase tracking-wider mb-5">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-brand-950 uppercase tracking-wider mb-5">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>AI-Powered Academic Roadmap</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
             FutureMap™ AI
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#044e3b] font-extrabold tracking-normal">
+          <p className="mt-4 text-base sm:text-lg text-brand-950 font-extrabold tracking-normal">
             Plan Your Journey Before It Begins.
           </p>
           <p className="mt-3 text-sm text-[#406b5c] max-w-2xl mx-auto leading-relaxed font-medium">
@@ -382,11 +382,11 @@ export function FutureMap() {
           
           {/* Controls Panel (Left) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-100/50 shadow-[0_12px_40px_rgba(4,78,59,0.02)] space-y-6 relative overflow-hidden bg-white/70">
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-brand-100/50 shadow-[0_12px_40px_rgba(4,78,59,0.02)] space-y-6 relative overflow-hidden bg-white/70">
               
               {/* Class Selector */}
               <div>
-                <label className="text-[10px] font-extrabold text-[#044e3b] uppercase tracking-wider block mb-3">
+                <label className="text-[10px] font-extrabold text-brand-950 uppercase tracking-wider block mb-3">
                   1. Current Class
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -397,8 +397,8 @@ export function FutureMap() {
                       className={cn(
                         "px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-300",
                         selectedClass === c.id
-                          ? "bg-[#e6f4ea] text-[#044e3b] border-emerald-300 shadow-sm"
-                          : "bg-white/50 text-[#406b5c] border-emerald-100 hover:bg-[#f0f7f2]"
+                          ? "bg-[#e6f4ea] text-brand-950 border-brand-300 shadow-sm"
+                          : "bg-white/50 text-[#406b5c] border-brand-100 hover:bg-[#f0f7f2]"
                       )}
                     >
                       {c.label}
@@ -409,7 +409,7 @@ export function FutureMap() {
 
               {/* Goal Selector */}
               <div>
-                <label className="text-[10px] font-extrabold text-[#044e3b] uppercase tracking-wider block mb-3">
+                <label className="text-[10px] font-extrabold text-brand-950 uppercase tracking-wider block mb-3">
                   2. Ultimate Goal
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -420,8 +420,8 @@ export function FutureMap() {
                       className={cn(
                         "px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-300",
                         selectedGoal === g.id
-                          ? "bg-[#e6f4ea] text-[#044e3b] border-emerald-300 shadow-sm"
-                          : "bg-white/50 text-[#406b5c] border-emerald-100 hover:bg-[#f0f7f2]"
+                          ? "bg-[#e6f4ea] text-brand-950 border-brand-300 shadow-sm"
+                          : "bg-white/50 text-[#406b5c] border-brand-100 hover:bg-[#f0f7f2]"
                       )}
                     >
                       {g.label}
@@ -432,7 +432,7 @@ export function FutureMap() {
 
               {/* Exam Selector */}
               <div>
-                <label className="text-[10px] font-extrabold text-[#044e3b] uppercase tracking-wider block mb-3">
+                <label className="text-[10px] font-extrabold text-brand-950 uppercase tracking-wider block mb-3">
                   3. Target Examination
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -443,8 +443,8 @@ export function FutureMap() {
                       className={cn(
                         "px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-300",
                         selectedExam === e.id
-                          ? "bg-[#e6f4ea] text-[#044e3b] border-emerald-300 shadow-sm"
-                          : "bg-white/50 text-[#406b5c] border-emerald-100 hover:bg-[#f0f7f2]"
+                          ? "bg-[#e6f4ea] text-brand-950 border-brand-300 shadow-sm"
+                          : "bg-white/50 text-[#406b5c] border-brand-100 hover:bg-[#f0f7f2]"
                       )}
                     >
                       {e.label}
@@ -460,13 +460,13 @@ export function FutureMap() {
                 className={cn(
                   "w-full flex items-center justify-center gap-2 py-3 sm:py-4.5 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-md select-none",
                   isGenerating 
-                    ? "bg-[#e6f4ea] text-[#406b5c] border border-emerald-200 cursor-not-allowed" 
-                    : "bg-[#044e3b] text-white hover:bg-[#033c2e] hover:-translate-y-0.5 border border-emerald-600/30 active:translate-y-0 active:scale-[0.98]"
+                    ? "bg-[#e6f4ea] text-[#406b5c] border border-brand-200 cursor-not-allowed" 
+                    : "bg-brand-950 text-white hover:bg-[#033c2e] hover:-translate-y-0.5 border border-brand-600/30 active:translate-y-0 active:scale-[0.98]"
                 )}
               >
                 {isGenerating ? (
                   <>
-                    <RefreshCw className="size-4 animate-spin text-emerald-600" />
+                    <RefreshCw className="size-4 animate-spin text-brand-600" />
                     <span>Analyzing Custom Roadmap...</span>
                   </>
                 ) : (
@@ -480,7 +480,7 @@ export function FutureMap() {
             </div>
 
             {/* Quick Actions Panel */}
-            <div className="glass-panel p-5 rounded-3xl border border-emerald-100/50 bg-white/70">
+            <div className="glass-panel p-5 rounded-3xl border border-brand-100/50 bg-white/70">
               <label className="text-[9px] font-extrabold text-[#406b5c] uppercase tracking-wider block mb-3 text-center">
                 Quick Action Presets
               </label>
@@ -489,9 +489,9 @@ export function FutureMap() {
                   <button
                     key={action.label}
                     onClick={() => handleQuickAction(action)}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-emerald-100 bg-white/60 text-[10px] font-bold text-[#044e3b] hover:bg-[#e6f4ea] transition-colors duration-300"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-brand-100 bg-white/60 text-[10px] font-bold text-brand-950 hover:bg-[#e6f4ea] transition-colors duration-300"
                   >
-                    <Zap className="size-3 text-emerald-600" />
+                    <Zap className="size-3 text-brand-600" />
                     <span>{action.label}</span>
                   </button>
                 ))}
@@ -502,7 +502,7 @@ export function FutureMap() {
 
           {/* Roadmap Dashboard / Output (Right) */}
           <div className="lg:col-span-7 h-full min-h-[500px]">
-            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-100/50 bg-white/70 h-full flex flex-col justify-between">
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-brand-100/50 bg-white/70 h-full flex flex-col justify-between">
               
               <AnimatePresence mode="wait">
                 {isGenerating ? (
@@ -517,12 +517,12 @@ export function FutureMap() {
                   >
                     <div className="relative">
                       {/* Outer pulse circle */}
-                      <div className="absolute inset-0 rounded-full border-4 border-emerald-100 size-20 animate-ping opacity-75" />
+                      <div className="absolute inset-0 rounded-full border-4 border-brand-100 size-20 animate-ping opacity-75" />
                       {/* Inner spinner */}
-                      <div className="rounded-full border-4 border-emerald-100 border-t-emerald-600 size-20 animate-spin" />
+                      <div className="rounded-full border-4 border-brand-100 border-t-brand-600 size-20 animate-spin" />
                     </div>
                     <div className="space-y-2">
-                      <p className="text-sm font-extrabold text-[#044e3b] tracking-wider uppercase animate-pulse">
+                      <p className="text-sm font-extrabold text-brand-950 tracking-wider uppercase animate-pulse">
                         {LOADING_STEPS[loadingStep]}
                       </p>
                       <p className="text-xs text-slate-400">
@@ -540,9 +540,9 @@ export function FutureMap() {
                     className="flex-1 flex flex-col justify-between"
                   >
                     {/* Roadmap Header Summary */}
-                    <div className="flex items-center justify-between pb-6 border-b border-emerald-100/60 mb-6">
+                    <div className="flex items-center justify-between pb-6 border-b border-brand-100/60 mb-6">
                       <div className="flex items-center gap-3">
-                        <div className="size-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                        <div className="size-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
                           <Activity className="size-5 animate-pulse" />
                         </div>
                         <div>
@@ -555,7 +555,7 @@ export function FutureMap() {
                         </div>
                       </div>
                       <div className="text-right">
-                        <span className="text-[10px] font-bold bg-[#e6f4ea] text-[#044e3b] border border-emerald-100 px-2.5 py-1 rounded-full uppercase">
+                        <span className="text-[10px] font-bold bg-[#e6f4ea] text-brand-950 border border-brand-100 px-2.5 py-1 rounded-full uppercase">
                           4 Phase Road
                         </span>
                       </div>
@@ -564,11 +564,11 @@ export function FutureMap() {
                     {/* Timeline Path Flow */}
                     <div className="grid grid-cols-4 gap-2 mb-8 relative pb-4">
                       {/* Main Horizontal Connector Line */}
-                      <div className="absolute top-4 left-[12.5%] right-[12.5%] h-0.5 bg-emerald-100" />
+                      <div className="absolute top-4 left-[12.5%] right-[12.5%] h-0.5 bg-brand-100" />
                       
                       {/* Connector Fill */}
                       <div 
-                        className="absolute top-4 left-[12.5%] h-0.5 bg-emerald-600 transition-all duration-700 ease-in-out" 
+                        className="absolute top-4 left-[12.5%] h-0.5 bg-brand-600 transition-all duration-700 ease-in-out" 
                         style={{ width: `${(activePhaseIndex / 3) * 75}%` }}
                       />
 
@@ -587,9 +587,9 @@ export function FutureMap() {
                               className={cn(
                                 "size-8.5 rounded-full flex items-center justify-center border-2 transition-all duration-300",
                                 isCurrent 
-                                  ? "bg-emerald-600 text-white border-emerald-600 scale-110 shadow-md shadow-emerald-600/20"
+                                  ? "bg-brand-600 text-white border-brand-600 scale-110 shadow-md shadow-brand-600/20"
                                   : isActive 
-                                    ? "bg-[#e6f4ea] text-[#044e3b] border-emerald-400"
+                                    ? "bg-[#e6f4ea] text-brand-950 border-brand-400"
                                     : "bg-white text-slate-300 border-slate-200 group-hover:border-slate-300"
                               )}
                             >
@@ -597,7 +597,7 @@ export function FutureMap() {
                             </div>
                             <span className={cn(
                               "text-[9px] font-bold tracking-tight mt-3 transition-colors uppercase max-w-[80px]",
-                              isCurrent ? "text-[#044e3b] font-extrabold" : "text-slate-400 group-hover:text-slate-500"
+                              isCurrent ? "text-brand-950 font-extrabold" : "text-slate-400 group-hover:text-slate-500"
                             )}>
                               Phase {idx + 1}
                             </span>
@@ -615,10 +615,10 @@ export function FutureMap() {
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="bg-emerald-500/[0.01] border border-emerald-100/50 rounded-2xl p-6 shadow-sm"
+                          className="bg-brand-500/[0.01] border border-brand-100/50 rounded-2xl p-6 shadow-sm"
                         >
                           <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                            <span className="text-[10px] font-extrabold text-emerald-600 uppercase tracking-widest">
+                            <span className="text-[10px] font-extrabold text-brand-600 uppercase tracking-widest">
                               {roadmapData[activePhaseIndex].phaseName}
                             </span>
                             <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400">
@@ -642,7 +642,7 @@ export function FutureMap() {
                             </label>
                             {roadmapData[activePhaseIndex].actionItems.map((item, idx) => (
                               <div key={idx} className="flex items-start gap-2.5">
-                                <CheckCircle className="size-4.5 text-emerald-600 shrink-0 mt-0.5" />
+                                <CheckCircle className="size-4.5 text-brand-600 shrink-0 mt-0.5" />
                                 <span className="text-xs text-[#04241a] font-medium leading-relaxed">
                                   {item}
                                 </span>
@@ -651,9 +651,9 @@ export function FutureMap() {
                           </div>
 
                           {/* Metric Goal footer */}
-                          <div className="mt-6 pt-4 border-t border-emerald-100/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0 text-[10px] font-bold">
+                          <div className="mt-6 pt-4 border-t border-brand-100/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0 text-[10px] font-bold">
                             <span className="text-slate-400 uppercase text-[9px] sm:text-[10px]">Key Milestone Metric</span>
-                            <span className="text-[#044e3b] font-extrabold bg-[#e6f4ea] px-2.5 py-1.5 sm:px-3 sm:py-1 rounded-lg sm:rounded-full border border-emerald-100/50 text-[10px] text-center sm:text-left w-full sm:w-auto">
+                            <span className="text-brand-950 font-extrabold bg-[#e6f4ea] px-2.5 py-1.5 sm:px-3 sm:py-1 rounded-lg sm:rounded-full border border-brand-100/50 text-[10px] text-center sm:text-left w-full sm:w-auto">
                               {roadmapData[activePhaseIndex].metrics}
                             </span>
                           </div>
@@ -663,7 +663,7 @@ export function FutureMap() {
                     </div>
 
                     {/* Timeline Navigation Actions */}
-                    <div className="flex items-center justify-between mt-6 pt-4 border-t border-emerald-100/60">
+                    <div className="flex items-center justify-between mt-6 pt-4 border-t border-brand-100/60">
                       <button
                         onClick={() => setActivePhaseIndex((prev) => Math.max(0, prev - 1))}
                         disabled={activePhaseIndex === 0}
@@ -671,7 +671,7 @@ export function FutureMap() {
                           "px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-semibold transition-all cursor-pointer whitespace-nowrap",
                           activePhaseIndex === 0 
                             ? "text-slate-300 cursor-not-allowed" 
-                            : "text-[#406b5c] hover:bg-[#e6f4ea] hover:text-[#044e3b]"
+                            : "text-[#406b5c] hover:bg-[#e6f4ea] hover:text-brand-950"
                         )}
                       >
                         Back
@@ -688,7 +688,7 @@ export function FutureMap() {
                             setActivePhaseIndex((prev) => Math.min(3, prev + 1));
                           }
                         }}
-                        className="flex items-center gap-0.5 sm:gap-1 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-bold text-white bg-[#044e3b] hover:bg-[#033c2e] transition-colors cursor-pointer whitespace-nowrap"
+                        className="flex items-center gap-0.5 sm:gap-1 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-bold text-white bg-brand-950 hover:bg-[#033c2e] transition-colors cursor-pointer whitespace-nowrap"
                       >
                         <span>{activePhaseIndex === 3 ? "Restart" : "Next Phase"}</span>
                         <ChevronRight className="size-3 sm:size-3.5" />
@@ -699,7 +699,7 @@ export function FutureMap() {
                 ) : (
                   /* Initial Empty/Placeholder State */
                   <div className="flex-1 flex flex-col items-center justify-center text-center py-20">
-                    <Compass className="size-16 text-emerald-100 animate-spin" style={{ animationDuration: '6s' }} />
+                    <Compass className="size-16 text-brand-100 animate-spin" style={{ animationDuration: '6s' }} />
                     <p className="mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
                       Ready to plan your roadmap
                     </p>

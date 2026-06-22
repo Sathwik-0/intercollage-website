@@ -97,8 +97,8 @@ export const CardDisplay: React.FC<CardDisplayProps> = ({ items, className }) =>
         >
           <Card
             className={cn(
-              "flex flex-col h-full border border-emerald-100/50 bg-white/70 backdrop-blur-xl shadow-sm transition-all duration-300",
-              hasHover && "hover:shadow-md hover:border-emerald-200/80 group"
+              "flex flex-col h-full border border-brand-100/50 bg-white/70 backdrop-blur-xl shadow-sm transition-all duration-300",
+              hasHover && "hover:shadow-md hover:border-brand-200/80 group"
             )}
             role="listitem" // ARIA role for a card item
           >
@@ -108,15 +108,15 @@ export const CardDisplay: React.FC<CardDisplayProps> = ({ items, className }) =>
               </CardTitle>
               {item.icon && (
                 <div className={cn(
-                  "w-8 h-8 rounded-full bg-[#e6f4ea] flex items-center justify-center text-[#044e3b] transition-colors",
+                  "w-8 h-8 rounded-full bg-[#e6f4ea] flex items-center justify-center text-brand-950 transition-colors",
                   hasHover && "group-hover:bg-[#d5eedc]"
                 )}>
-                  <item.icon className="h-4 w-4 text-[#044e3b]" aria-hidden="true" />
+                  <item.icon className="h-4 w-4 text-brand-950" aria-hidden="true" />
                 </div>
               )}
             </CardHeader>
             <CardContent className="flex-grow p-5 pt-0">
-              <div className="text-xl sm:text-2xl font-black text-emerald-950 tracking-tight mb-1">{item.value}</div>
+              <div className="text-xl sm:text-2xl font-black text-brand-950 tracking-tight mb-1">{item.value}</div>
               <CardDescription className="text-[11px] font-medium text-zinc-500 leading-normal min-h-[1.5rem]">
                 {item.description}
               </CardDescription>
@@ -130,7 +130,7 @@ export const CardDisplay: React.FC<CardDisplayProps> = ({ items, className }) =>
                   disabled={item.isDisabled}
                   className={cn(
                     "w-full text-xs font-bold transition-all duration-300 border-zinc-200 rounded-xl",
-                    hasHover && "hover:bg-emerald-50 hover:text-emerald-900 border-emerald-200"
+                    hasHover && "hover:bg-brand-50 hover:text-brand-900 border-brand-200"
                   )}
                   aria-label={`Action for ${item.title}: ${item.actionLabel}`}
                 >

@@ -118,7 +118,7 @@ export function UrgencyLayer() {
   return (
     <section
       id="urgency-layer"
-      className="relative py-20 md:py-28 px-4 bg-white border-t border-emerald-100/30 scroll-mt-28 overflow-hidden"
+      className="relative py-20 md:py-28 px-4 bg-white border-t border-brand-100/30 scroll-mt-28 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background Grid Lines Overlay */}
@@ -128,8 +128,8 @@ export function UrgencyLayer() {
         
         {/* Header Block */}
         <div className="max-w-3xl mx-auto px-6 space-y-4 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-[0.18em]">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[9px] font-extrabold text-brand-950 uppercase tracking-[0.18em]">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>ADMISSIONS 2026</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -171,11 +171,11 @@ export function UrgencyLayer() {
           <motion.div 
             variants={itemVariants}
             style={isMobile ? undefined : { willChange: "transform, opacity" }}
-            className="lg:col-span-2 relative border border-emerald-100/50 bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between"
+            className="lg:col-span-2 relative border border-brand-100/50 bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between"
           >
             <div>
               <h3 className="text-sm font-black text-[#04241a] uppercase tracking-wider mb-1 flex items-center gap-2">
-                <Sparkles className="size-4.5 text-emerald-600" />
+                <Sparkles className="size-4.5 text-brand-600" />
                 Admission Milestone Flow
               </h3>
               <p className="text-xs font-bold text-zinc-400 mb-8">
@@ -185,10 +185,10 @@ export function UrgencyLayer() {
               {/* Timeline Flow */}
               <div className="relative">
                 {/* Horizontal dotted line for desktop */}
-                <div className="absolute top-5 left-8 right-8 h-0.5 border-t border-dashed border-emerald-100/80 pointer-events-none z-0 hidden md:block" />
+                <div className="absolute top-5 left-8 right-8 h-0.5 border-t border-dashed border-brand-100/80 pointer-events-none z-0 hidden md:block" />
                 
                 {/* Vertical dotted line for mobile */}
-                <div className="absolute left-[19px] top-6 bottom-6 w-0.5 border-l border-dashed border-emerald-100/80 pointer-events-none z-0 block md:hidden" />
+                <div className="absolute left-[19px] top-6 bottom-6 w-0.5 border-l border-dashed border-brand-100/80 pointer-events-none z-0 block md:hidden" />
                 
                 <motion.div 
                   variants={containerVariants}
@@ -204,9 +204,9 @@ export function UrgencyLayer() {
                       {/* Step Circle */}
                       <div className={`size-10 rounded-full flex items-center justify-center font-black text-xs border transition-all duration-300 md:mb-4 flex-shrink-0 ${
                         milestone.isCompleted 
-                          ? "bg-[#e6f4ea] border-emerald-200 text-[#044e3b]"
+                          ? "bg-[#e6f4ea] border-brand-200 text-brand-950"
                           : milestone.isActive
-                            ? "bg-emerald-700 border-emerald-500 text-white shadow-md ring-4 ring-emerald-500/20"
+                            ? "bg-brand-700 border-brand-500 text-white shadow-md ring-4 ring-brand-500/20"
                             : "bg-white border-zinc-200 text-zinc-400"
                       }`}>
                         {milestone.step}
@@ -216,9 +216,9 @@ export function UrgencyLayer() {
                       <div className="text-left">
                         <span className={`text-[9px] font-bold uppercase tracking-wider block mb-0.5 ${
                           milestone.isCompleted 
-                            ? "text-emerald-700" 
+                            ? "text-brand-700" 
                             : milestone.isActive 
-                              ? "text-emerald-800 animate-pulse" 
+                              ? "text-brand-800 animate-pulse" 
                               : "text-zinc-400"
                         }`}>
                           {milestone.status}
@@ -241,7 +241,7 @@ export function UrgencyLayer() {
           <motion.div 
             variants={itemVariants}
             style={isMobile ? undefined : { willChange: "transform, opacity" }}
-            className="lg:col-span-1 border border-emerald-100/50 bg-[#fbfdfc]/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between border-l-4 border-l-[#044e3b]"
+            className="lg:col-span-1 border border-brand-100/50 bg-[#fbfdfc]/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between border-l-4 border-l-brand-950"
           >
             <div>
               <h3 className="text-sm font-black text-[#04241a] uppercase tracking-wider mb-1">
@@ -259,8 +259,8 @@ export function UrgencyLayer() {
                   "Limited Intake Capacity",
                   "Parent Orientation Ongoing",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-xs font-bold text-emerald-950/80">
-                    <CheckCircle2 className="size-4 text-emerald-600 flex-shrink-0" />
+                  <li key={item} className="flex items-center gap-2.5 text-xs font-bold text-brand-950/80">
+                    <CheckCircle2 className="size-4 text-brand-600 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -269,7 +269,7 @@ export function UrgencyLayer() {
             
             <div className="mt-8 pt-6 border-t border-zinc-100 flex items-center justify-between text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
               <span>Last Updated</span>
-              <span className="text-emerald-800">Today</span>
+              <span className="text-brand-800">Today</span>
             </div>
           </motion.div>
 

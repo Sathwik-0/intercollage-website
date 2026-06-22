@@ -29,7 +29,7 @@ const ACHIEVERS: Achiever[] = [
     exam: "JEE Advanced",
     year: "2025",
     batch: "CO-SPARK IIT Elite",
-    avatarBg: "from-emerald-500 to-teal-700",
+    avatarBg: "from-brand-500 to-brand-accent-700",
     scores: [
       { label: "Mathematics", value: "99.92%" },
       { label: "Physics", value: "99.85%" },
@@ -43,7 +43,7 @@ const ACHIEVERS: Achiever[] = [
     exam: "NEET Medical",
     year: "2025",
     batch: "AIIMS Target Super 30",
-    avatarBg: "from-teal-500 to-emerald-700",
+    avatarBg: "from-brand-accent-500 to-brand-700",
     scores: [
       { label: "Biology", value: "355/360" },
       { label: "Chemistry", value: "175/180" },
@@ -57,7 +57,7 @@ const ACHIEVERS: Achiever[] = [
     exam: "JEE Advanced",
     year: "2025",
     batch: "CO-SPARK IIT Elite",
-    avatarBg: "from-emerald-600 to-cyan-700",
+    avatarBg: "from-brand-600 to-cyan-700",
     scores: [
       { label: "Mathematics", value: "99.88%" },
       { label: "Physics", value: "99.80%" },
@@ -174,8 +174,8 @@ export function PerformanceCommandCenter() {
         
         {/* Title Block */}
         <div className="mb-16 flex flex-col items-center text-center">
-          <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">
-            <Trophy className="size-3 text-emerald-600" />
+          <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-brand-950 uppercase tracking-wider">
+            <Trophy className="size-3 text-brand-600" />
             <span>Section 04 — Performance Command Center</span>
           </span>
           <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight text-[#04241a] md:text-5xl md:leading-[1.15]">
@@ -207,7 +207,7 @@ export function PerformanceCommandCenter() {
               hoveredBlock && hoveredBlock !== "achievers" && "opacity-50 blur-[2px] scale-[0.98]"
             )}
           >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-emerald-50/50 pb-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-50/50 pb-5">
               <div>
                 <span className="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest leading-none">
                   Registry Engine
@@ -224,8 +224,8 @@ export function PerformanceCommandCenter() {
                     className={cn(
                       "px-3 py-1.5 rounded-full text-[10px] font-bold transition-all cursor-pointer",
                       activeAchieverId === achiever.id 
-                        ? "bg-[#044e3b] text-white shadow-sm" 
-                        : "bg-emerald-50 text-[#406b5c] hover:bg-[#e6f4ea] hover:text-[#044e3b]"
+                        ? "bg-brand-950 text-white shadow-sm" 
+                        : "bg-brand-50 text-[#406b5c] hover:bg-[#e6f4ea] hover:text-brand-950"
                     )}
                   >
                     {achiever.rank}
@@ -243,7 +243,7 @@ export function PerformanceCommandCenter() {
                   <div className="relative w-36 h-36 rounded-2xl bg-gradient-to-br p-[1.5px] shadow-[0_12px_24px_rgba(4,78,59,0.06)] overflow-hidden group/avatar">
                     {/* Radial Backglow */}
                     <div className="absolute inset-0 bg-[#f4faf6] z-0 flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-emerald-500/10 blur-xl pointer-events-none" />
+                      <div className="w-24 h-24 rounded-full bg-brand-500/10 blur-xl pointer-events-none" />
                     </div>
                     {/* SVG Graphic Avatar */}
                     <div className="relative z-10 w-full h-full rounded-[14px] bg-[#f4faf6] flex flex-col items-center justify-center p-4">
@@ -263,7 +263,7 @@ export function PerformanceCommandCenter() {
                 {/* Achiever Statistics Presentation */}
                 <div className="md:col-span-7 flex flex-col gap-4 text-left">
                   <div>
-                    <span className="text-[8px] font-extrabold text-emerald-600 bg-emerald-50 border border-emerald-100 rounded px-1.5 py-0.5 uppercase tracking-widest">
+                    <span className="text-[8px] font-extrabold text-brand-600 bg-brand-50 border border-brand-100 rounded px-1.5 py-0.5 uppercase tracking-widest">
                       {activeAchiever.batch}
                     </span>
                     <h4 className="text-xl font-extrabold text-[#04241a] mt-2.5">
@@ -275,11 +275,11 @@ export function PerformanceCommandCenter() {
                   </div>
 
                   {/* Core Scores specification list */}
-                  <div className="flex flex-col gap-2 border-t border-emerald-50/50 pt-3">
+                  <div className="flex flex-col gap-2 border-t border-brand-50/50 pt-3">
                     {activeAchiever.scores.map((score, idx) => (
                       <div key={idx} className="flex justify-between items-center py-1 text-xs">
                         <span className="text-slate-400 font-bold">{score.label} Percentile</span>
-                        <span className="font-extrabold text-[#044e3b] bg-[#e6f4ea] px-2 py-0.5 rounded-md">
+                        <span className="font-extrabold text-brand-950 bg-[#e6f4ea] px-2 py-0.5 rounded-md">
                           {score.value}
                         </span>
                       </div>
@@ -290,8 +290,8 @@ export function PerformanceCommandCenter() {
               </div>
 
               {/* Verified Badge */}
-              <div className="border-t border-emerald-50/50 pt-4 mt-6 flex items-center gap-1.5 text-[9px] font-bold text-slate-400">
-                <ShieldCheck className="size-3.5 text-emerald-600" />
+              <div className="border-t border-brand-50/50 pt-4 mt-6 flex items-center gap-1.5 text-[9px] font-bold text-slate-400">
+                <ShieldCheck className="size-3.5 text-brand-600" />
                 <span>Verified National Registry Scoreboard • UID: 042025-{activeAchiever.id}</span>
               </div>
             </div>
@@ -349,7 +349,7 @@ export function PerformanceCommandCenter() {
                         transition={{ duration: 1.5, delay: idx * 0.15, ease: "easeOut" }}
                       />
                     </svg>
-                    <span className="absolute text-[9px] font-extrabold text-[#044e3b]">
+                    <span className="absolute text-[9px] font-extrabold text-brand-950">
                       {inView ? <CountUp start={0} end={Math.round(exam.qualifiedPercent)} duration={1.5} /> : "0"}%
                     </span>
                   </div>
@@ -366,9 +366,9 @@ export function PerformanceCommandCenter() {
               ))}
             </div>
 
-            <div className="border-t border-emerald-50/50 pt-4 flex items-center justify-between text-[9px] font-bold text-[#406b5c]">
+            <div className="border-t border-brand-50/50 pt-4 flex items-center justify-between text-[9px] font-bold text-[#406b5c]">
               <span>CURRICULUM ACCURACY YIELD</span>
-              <span className="text-emerald-600">STABILIZED</span>
+              <span className="text-brand-600">STABILIZED</span>
             </div>
           </motion.div>
 
@@ -384,7 +384,7 @@ export function PerformanceCommandCenter() {
               hoveredBlock && hoveredBlock !== "subjects" && "opacity-50 blur-[2px] scale-[0.98]"
             )}
           >
-            <div className="border-b border-emerald-50/50 pb-4 mb-5">
+            <div className="border-b border-brand-50/50 pb-4 mb-5">
               <span className="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest leading-none">
                 Hardware Core Specs
               </span>
@@ -404,27 +404,27 @@ export function PerformanceCommandCenter() {
                   <div 
                     key={idx}
                     className={cn(
-                      "border border-emerald-50/60 rounded-xl p-3.5 bg-white/50 text-left transition-all duration-300 group/item",
-                      hasHover && "hover:border-emerald-200 hover:bg-emerald-50/20"
+                      "border border-brand-50/60 rounded-xl p-3.5 bg-white/50 text-left transition-all duration-300 group/item",
+                      hasHover && "hover:border-brand-200 hover:bg-brand-50/20"
                     )}
                   >
                     <div className="flex items-center justify-between gap-2">
                       <span className="text-[10px] font-extrabold text-[#04241a] leading-none">
                         {engine.subject}
                       </span>
-                      <IconComponent className="size-3.5 text-slate-400 group-hover/item:text-[#044e3b] transition-colors" />
+                      <IconComponent className="size-3.5 text-slate-400 group-hover/item:text-brand-950 transition-colors" />
                     </div>
                     <div className="mt-3 flex items-baseline gap-1.5">
-                      <span className="text-base font-extrabold text-[#044e3b]">
+                      <span className="text-base font-extrabold text-brand-950">
                         {engine.maxScore.split("/")[0]}
                       </span>
                       <span className="text-[9px] text-slate-400 font-bold">
                         /{engine.maxScore.split("/")[1]} Max
                       </span>
                     </div>
-                    <div className="flex justify-between items-center mt-2.5 pt-2 border-t border-dashed border-emerald-50 text-[9px] font-bold">
+                    <div className="flex justify-between items-center mt-2.5 pt-2 border-t border-dashed border-brand-50 text-[9px] font-bold">
                       <span className="text-slate-400">Avg {engine.avgPercent}%</span>
-                      <span className="text-emerald-600 bg-emerald-50 px-1 rounded">{engine.improvement}</span>
+                      <span className="text-brand-600 bg-brand-50 px-1 rounded">{engine.improvement}</span>
                     </div>
                   </div>
                 );
@@ -459,36 +459,36 @@ export function PerformanceCommandCenter() {
             {/* Stepping progression design */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
               
-              <div className="relative border border-emerald-50 rounded-xl p-4 bg-white/40 text-left flex flex-col justify-between min-h-[110px]">
+              <div className="relative border border-brand-50 rounded-xl p-4 bg-white/40 text-left flex flex-col justify-between min-h-[110px]">
                 <div className="text-[10px] font-bold text-slate-400">ERA 1 • 2018</div>
                 <div className="my-auto flex flex-col mt-2">
                   <span className="text-2xl font-extrabold text-[#04241a]">2</span>
                   <span className="text-[9px] text-slate-500 font-bold leading-tight mt-0.5">Top 500 Ranks</span>
                 </div>
-                <span className="text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded self-start mt-2">Baseline</span>
+                <span className="text-[8px] font-bold text-brand-600 bg-brand-50 px-1 py-0.5 rounded self-start mt-2">Baseline</span>
               </div>
 
-              <div className="relative border border-emerald-50 rounded-xl p-4 bg-white/40 text-left flex flex-col justify-between min-h-[110px]">
+              <div className="relative border border-brand-50 rounded-xl p-4 bg-white/40 text-left flex flex-col justify-between min-h-[110px]">
                 <div className="text-[10px] font-bold text-slate-400">ERA 2 • 2021</div>
                 <div className="my-auto flex flex-col mt-2">
                   <span className="text-2xl font-extrabold text-[#04241a]">6</span>
                   <span className="text-[9px] text-slate-500 font-bold leading-tight mt-0.5">Top 200 Ranks</span>
                 </div>
-                <span className="text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded self-start mt-2">+200% Growth</span>
+                <span className="text-[8px] font-bold text-brand-600 bg-brand-50 px-1 py-0.5 rounded self-start mt-2">+200% Growth</span>
               </div>
 
-              <div className="relative border border-[#044e3b]/30 rounded-xl p-4 bg-[#f4faf6] text-left flex flex-col justify-between min-h-[110px]">
-                <div className="text-[10px] font-bold text-emerald-700">ERA 3 • 2025</div>
+              <div className="relative border border-brand-950/30 rounded-xl p-4 bg-[#f4faf6] text-left flex flex-col justify-between min-h-[110px]">
+                <div className="text-[10px] font-bold text-brand-700">ERA 3 • 2025</div>
                 <div className="my-auto flex flex-col mt-2">
-                  <span className="text-2xl font-extrabold text-[#044e3b]">14</span>
+                  <span className="text-2xl font-extrabold text-brand-950">14</span>
                   <span className="text-[9px] text-slate-500 font-bold leading-tight mt-0.5">Top 100 Ranks</span>
                 </div>
-                <span className="text-[8px] font-bold text-white bg-[#044e3b] px-1.5 py-0.5 rounded self-start mt-2">Peak Yield</span>
+                <span className="text-[8px] font-bold text-white bg-brand-950 px-1.5 py-0.5 rounded self-start mt-2">Peak Yield</span>
               </div>
 
             </div>
 
-            <div className="border-t border-emerald-50/50 pt-4 flex items-center justify-between text-[9px] font-bold text-slate-400">
+            <div className="border-t border-brand-50/50 pt-4 flex items-center justify-between text-[9px] font-bold text-slate-400">
               <span>SYSTEM SCALING REGISTERED</span>
               <span>VERIFIED ACCELERATION</span>
             </div>
@@ -521,7 +521,7 @@ export function PerformanceCommandCenter() {
             {/* Glowing stats list */}
             <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-6">
               
-              <div className="border-l-2 border-emerald-500 pl-4 text-left">
+              <div className="border-l-2 border-brand-500 pl-4 text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase block">IIT Admissions</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight block mt-1">
                   {inView ? <CountUp start={0} end={420} duration={2} suffix="+" /> : "0"}
@@ -529,7 +529,7 @@ export function PerformanceCommandCenter() {
                 <span className="text-[9px] text-[#406b5c] font-bold">Top-10 Departments</span>
               </div>
 
-              <div className="border-l-2 border-emerald-500 pl-4 text-left">
+              <div className="border-l-2 border-brand-500 pl-4 text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase block">NIT & BITS Admissions</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight block mt-1">
                   {inView ? <CountUp start={0} end={680} duration={2.2} suffix="+" /> : "0"}
@@ -537,7 +537,7 @@ export function PerformanceCommandCenter() {
                 <span className="text-[9px] text-[#406b5c] font-bold">Engineering Yield</span>
               </div>
 
-              <div className="border-l-2 border-emerald-500 pl-4 text-left">
+              <div className="border-l-2 border-brand-500 pl-4 text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase block">Medical Admissions</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight block mt-1">
                   {inView ? <CountUp start={0} end={180} duration={2.4} suffix="+" /> : "0"}
@@ -545,7 +545,7 @@ export function PerformanceCommandCenter() {
                 <span className="text-[9px] text-[#406b5c] font-bold">AIIMS / Govt Medical</span>
               </div>
 
-              <div className="border-l-2 border-emerald-500 pl-4 text-left">
+              <div className="border-l-2 border-brand-500 pl-4 text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase block">Govt Universities</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight block mt-1">
                   {inView ? <CountUp start={0} end={980} duration={2.6} suffix="+" /> : "0"}

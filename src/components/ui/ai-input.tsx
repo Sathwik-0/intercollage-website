@@ -247,7 +247,7 @@ export function MorphPanel({ onSend, isTyping = false }: { onSend?: (message: st
   )
 
   return (
-    <div className="flex items-center justify-center" style={{ width: FORM_WIDTH, height: FORM_HEIGHT }}>
+    <div className="flex items-center justify-end" style={{ width: FORM_WIDTH, height: FORM_HEIGHT }}>
       <motion.div
         ref={wrapperRef}
         data-panel

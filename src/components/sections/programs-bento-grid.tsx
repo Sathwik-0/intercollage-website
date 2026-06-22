@@ -128,7 +128,7 @@ export function ProgramsBentoGrid() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-[#044e3b] uppercase tracking-wider mb-5">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-brand-950 uppercase tracking-wider mb-5">
             <span>Academic Pathways</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -150,7 +150,7 @@ export function ProgramsBentoGrid() {
               <div
                 key={program.id}
                 className={cn(
-                  "relative flex flex-col justify-between overflow-hidden rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer",
+                  "relative flex flex-col justify-between overflow-hidden rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer",
                   program.gridClass
                 )}
               >
@@ -158,8 +158,8 @@ export function ProgramsBentoGrid() {
                 <div className={cn("p-6 sm:p-8 flex flex-col justify-between gap-4", isFeatured ? "lg:w-[48%] lg:min-h-[340px]" : "")}>
                   <div className="space-y-4">
                     {/* Badge */}
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider border border-emerald-100/60">
-                      <IconComponent className="size-3 text-emerald-600" />
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider border border-brand-100/60">
+                      <IconComponent className="size-3 text-brand-600" />
                       <span>{program.badge}</span>
                     </span>
 
@@ -172,7 +172,7 @@ export function ProgramsBentoGrid() {
                     <ul className="space-y-2.5">
                       {program.highlights.map((h, i) => (
                         <li key={i} className="flex items-center gap-2">
-                          <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
+                          <CheckCircle2 className="size-4 text-brand-600 shrink-0" />
                           <span className="text-xs text-[#406b5c] font-semibold tracking-wide">
                             {h.text}
                           </span>
@@ -184,7 +184,7 @@ export function ProgramsBentoGrid() {
                   {/* Explore Link CTA */}
                   <ProgramDetailsModal programId={program.id}>
                     <div className="pt-2 self-start">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors duration-300">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-950 group-hover:text-brand-700 transition-colors duration-300">
                         <span>{program.ctaText}</span>
                         <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
                       </span>

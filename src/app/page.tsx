@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Ambient Backdrop Glows */}
       <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full bg-indigo-500/5 blur-[130px] pointer-events-none z-0" />
-      <div className="absolute bottom-[20%] right-[15%] w-[700px] h-[700px] rounded-full bg-emerald-500/3 blur-[150px] pointer-events-none z-0" />
+      <div className="absolute bottom-[20%] right-[15%] w-[700px] h-[700px] rounded-full bg-brand-500/3 blur-[150px] pointer-events-none z-0" />
 
       {/* Navigation System */}
       <Navbar activeSection={activeSection} onNavClick={setActiveSection} />

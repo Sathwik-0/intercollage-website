@@ -69,7 +69,7 @@ export default function TimelineRail({
   lineThickness = 6,
   dotClass = 'bg-zinc-400 dark:bg-zinc-600',
   dotActiveClass = 'bg-zinc-900 dark:bg-zinc-100',
-  activeTrailClass = 'bg-emerald-600',
+  activeTrailClass = 'bg-brand-600',
   className,
   railClassName,
   itemClassName,

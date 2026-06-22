@@ -137,7 +137,7 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             className={cn(
               "absolute inset-0 rounded-[24px] transition-all duration-500 z-0",
               isScrolled 
-                ? "bg-white/80 backdrop-blur-xl border border-emerald-100/50 shadow-[0_8px_30px_rgba(4,78,59,0.06)]" 
+                ? "bg-white/80 backdrop-blur-xl border border-brand-100/50 shadow-[0_8px_30px_rgba(4,78,59,0.06)]" 
                 : "bg-transparent border border-transparent"
             )}
             style={isScrolled ? {
@@ -151,9 +151,9 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             className="relative z-10 flex items-center gap-2.5 cursor-pointer group select-none"
           >
             {/* Elegant Prestige Shield Logo - Emerald Theme */}
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-700 p-[1px] shadow-[0_4px_10px_rgba(16,185,129,0.15)] group-hover:scale-105 transition-all duration-300">
-              <div className="flex items-center justify-center w-full h-full rounded-[7px] bg-[#f4faf6] text-emerald-600">
-                <svg className="w-4.5 h-4.5 text-emerald-600 group-hover:text-teal-700 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 via-brand-600 to-brand-accent-700 p-[1px] shadow-[0_4px_10px_rgba(16,185,129,0.15)] group-hover:scale-105 transition-all duration-300">
+              <div className="flex items-center justify-center w-full h-full rounded-[7px] bg-[#f4faf6] text-brand-600">
+                <svg className="w-4.5 h-4.5 text-brand-600 group-hover:text-brand-accent-700 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M12 2L2 7l10 5 10-5-10-5z" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M2 17l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -163,14 +163,14 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             
             {/* Wordmark */}
             <div className="flex flex-col text-left">
-              <span className="font-extrabold tracking-[-0.03em] leading-none text-[#044e3b] text-base group-hover:text-emerald-600 transition-colors">
+              <span className="font-extrabold tracking-[-0.03em] leading-none text-brand-950 text-base group-hover:text-brand-600 transition-colors">
                 Inter-College
               </span>
             </div>
           </div>
 
           {/* CENTER: Navigation Links (Desktop) */}
-          <nav className="relative z-10 hidden lg:flex items-center gap-1 rounded-full bg-emerald-500/[0.03] border border-emerald-500/[0.06] p-1 backdrop-blur-md">
+          <nav className="relative z-10 hidden lg:flex items-center gap-1 rounded-full bg-brand-500/[0.03] border border-brand-500/[0.06] p-1 backdrop-blur-md">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -178,15 +178,15 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
                   className={cn(
-                    "relative px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50",
-                    isActive ? "text-white font-bold" : "text-[#406b5c] hover:text-[#044e3b]"
+                    "relative px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide cursor-pointer transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50",
+                    isActive ? "text-white font-bold" : "text-[#406b5c] hover:text-brand-950"
                   )}
                 >
                   {/* Gliding Active Indicator - Emerald Green style */}
                   {isActive && (
                     <motion.span
                       layoutId="activeNavIndicator"
-                      className="absolute inset-0 bg-[#044e3b] rounded-full z-0 shadow-sm"
+                      className="absolute inset-0 bg-brand-950 rounded-full z-0 shadow-sm"
                       transition={{ type: "spring", stiffness: 500, damping: 35, mass: 0.8 }}
                     />
                   )}
@@ -201,10 +201,10 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             {/* Secondary CTA: Call Now */}
             <a 
               href="tel:+919876543210" 
-              className="group/call flex items-center gap-2 text-xs font-semibold text-[#406b5c] hover:text-[#044e3b] transition-colors cursor-pointer"
+              className="group/call flex items-center gap-2 text-xs font-semibold text-[#406b5c] hover:text-brand-950 transition-colors cursor-pointer"
             >
-              <div className="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/[0.03] border border-emerald-500/[0.06] group-hover/call:bg-emerald-500/[0.08] group-hover/call:border-emerald-500/[0.12] transition-all">
-                <Phone className="size-3 text-[#406b5c] group-hover/call:text-[#044e3b] transition-colors" />
+              <div className="flex items-center justify-center w-7 h-7 rounded-full bg-brand-500/[0.03] border border-brand-500/[0.06] group-hover/call:bg-brand-500/[0.08] group-hover/call:border-brand-500/[0.12] transition-all">
+                <Phone className="size-3 text-[#406b5c] group-hover/call:text-brand-950 transition-colors" />
               </div>
               <span>Call Counselor</span>
             </a>
@@ -212,7 +212,7 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
             {/* Primary CTA: Book Campus Visit (Solid Emerald Green Capsule) */}
             <CampusVisitDialog>
               <button
-                className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-xs font-bold tracking-wide px-5 py-2.5 transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_16px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer"
+                className="rounded-full bg-brand-950 hover:bg-[#03382a] text-white text-xs font-bold tracking-wide px-5 py-2.5 transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_16px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer"
               >
                 Book Campus Visit
               </button>
@@ -223,14 +223,14 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
           <div className="relative z-10 lg:hidden flex items-center gap-3">
             <a 
               href="tel:+919876543210" 
-              className="flex items-center justify-center w-11 h-11 rounded-full bg-emerald-500/[0.03] border border-emerald-500/[0.06] text-[#406b5c] hover:text-[#044e3b] cursor-pointer active:scale-95 transition-all"
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-brand-500/[0.03] border border-brand-500/[0.06] text-[#406b5c] hover:text-brand-950 cursor-pointer active:scale-95 transition-all"
             >
-              <Phone className="size-4 text-emerald-600" />
+              <Phone className="size-4 text-brand-600" />
             </a>
             
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center justify-center w-11 h-11 rounded-lg bg-emerald-500/[0.03] border border-emerald-500/[0.06] text-[#044e3b] cursor-pointer active:scale-95 transition-all focus:outline-none"
+              className="flex items-center justify-center w-11 h-11 rounded-lg bg-brand-500/[0.03] border border-brand-500/[0.06] text-brand-950 cursor-pointer active:scale-95 transition-all focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -251,7 +251,7 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
           >
             {/* Isolated background to avoid text warp */}
             <div 
-              className="absolute inset-0 bg-white/95 backdrop-blur-2xl border border-emerald-100/80 shadow-[0_24px_60px_rgba(4,78,59,0.08)] rounded-2xl z-0"
+              className="absolute inset-0 bg-white/95 backdrop-blur-2xl border border-brand-100/80 shadow-[0_24px_60px_rgba(4,78,59,0.08)] rounded-2xl z-0"
               style={{ filter: "url(#nav-glass-distortion)" }}
             />
 
@@ -266,8 +266,8 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
                       className={cn(
                         "w-full text-left py-3.5 px-4 rounded-xl text-xs font-semibold tracking-wide transition-all cursor-pointer",
                         isActive 
-                          ? "bg-[#044e3b]/10 text-[#044e3b] border-l-2 border-[#044e3b]" 
-                          : "text-[#406b5c] hover:text-[#044e3b] hover:bg-[#044e3b]/5"
+                          ? "bg-brand-950/10 text-brand-950 border-l-2 border-brand-950" 
+                          : "text-[#406b5c] hover:text-brand-950 hover:bg-brand-950/5"
                       )}
                     >
                       {item.label}
@@ -276,18 +276,18 @@ export function Navbar({ activeSection = "home", onNavClick }: NavbarProps) {
                 })}
               </nav>
 
-              <div className="flex flex-col gap-3 border-t border-emerald-100 pt-4">
+              <div className="flex flex-col gap-3 border-t border-brand-100 pt-4">
                 <a 
                   href="tel:+919876543210"
-                  className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-emerald-100 bg-[#044e3b]/5 text-xs font-semibold text-[#044e3b] hover:bg-[#044e3b]/10 transition-all cursor-pointer"
+                  className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-brand-100 bg-brand-950/5 text-xs font-semibold text-brand-950 hover:bg-brand-950/10 transition-all cursor-pointer"
                 >
-                  <Phone className="size-3.5 text-emerald-600" />
+                  <Phone className="size-3.5 text-brand-600" />
                   Call Counselor
                 </a>
                 
                 <CampusVisitDialog>
                   <button
-                    className="w-full rounded-xl bg-[#044e3b] hover:bg-[#03382a] text-white py-3.5 text-xs font-bold tracking-wide transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] cursor-pointer"
+                    className="w-full rounded-xl bg-brand-950 hover:bg-[#03382a] text-white py-3.5 text-xs font-bold tracking-wide transition-all shadow-[0_4px_12px_rgba(4,78,59,0.15)] cursor-pointer"
                   >
                     Book Campus Visit
                   </button>

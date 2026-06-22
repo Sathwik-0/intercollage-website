@@ -59,7 +59,7 @@ export function CampusExperience() {
   return (
     <section
       id="campus"
-      className="relative py-20 md:py-28 px-4 bg-[#f4faf6] border-t border-emerald-100/50 scroll-mt-28 overflow-hidden"
+      className="relative py-20 md:py-28 px-4 bg-[#f4faf6] border-t border-brand-100/50 scroll-mt-28 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background Subtle Grid Overlay */}
@@ -70,7 +70,7 @@ export function CampusExperience() {
           {/* Header with socials */}
           <div className="flex justify-between items-center mb-8 w-full z-20">
             <div className="flex items-center gap-2">
-              <span className="inline-flex size-5 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 animate-spin">
+              <span className="inline-flex size-5 items-center justify-center rounded-full bg-brand-100 text-brand-700 animate-spin">
                 <Sparkles className="size-3" />
               </span>
               <TimelineContent
@@ -78,7 +78,7 @@ export function CampusExperience() {
                 animationNum={0}
                 timelineRef={sectionRef}
                 customVariants={revealVariants}
-                className="text-xs font-bold text-emerald-800 uppercase tracking-widest"
+                className="text-xs font-bold text-brand-800 uppercase tracking-widest"
               >
                 The Future Learning Ecosystem
               </TimelineContent>
@@ -132,8 +132,8 @@ export function CampusExperience() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "size-8 border border-emerald-100 bg-white/70 transition-all rounded-lg flex items-center justify-center cursor-pointer text-emerald-800 shadow-sm",
-                    hasHover && "hover:bg-emerald-50 hover:border-emerald-300"
+                    "size-8 border border-brand-100 bg-white/70 transition-all rounded-lg flex items-center justify-center cursor-pointer text-brand-800 shadow-sm",
+                    hasHover && "hover:bg-brand-50 hover:border-brand-300"
                   )}
                 >
                   {item.svg}
@@ -143,7 +143,7 @@ export function CampusExperience() {
           </div>
 
           {/* Interactive Image Box with SVG Clip Path */}
-          <div className="relative w-full mb-10 overflow-hidden rounded-3xl border border-emerald-100 bg-emerald-950/5 group shadow-[0_12px_40px_rgba(4,78,59,0.06)]">
+          <div className="relative w-full mb-10 overflow-hidden rounded-3xl border border-brand-100 bg-brand-950/5 group shadow-[0_12px_40px_rgba(4,78,59,0.06)]">
             <TimelineContent
               as="figure"
               animationNum={5}
@@ -173,7 +173,7 @@ export function CampusExperience() {
               />
               
               {/* Micro-Interaction Indicator */}
-              <div className="absolute bottom-4 right-4 z-10 pointer-events-none bg-emerald-950/80 backdrop-blur-md border border-emerald-700/30 text-white rounded-lg px-3 py-1.5 text-[10px] tracking-wider font-extrabold uppercase flex items-center gap-1.5 opacity-90 group-hover:opacity-0 transition-opacity duration-300">
+              <div className="absolute bottom-4 right-4 z-10 pointer-events-none bg-brand-950/80 backdrop-blur-md border border-brand-700/30 text-white rounded-lg px-3 py-1.5 text-[10px] tracking-wider font-extrabold uppercase flex items-center gap-1.5 opacity-90 group-hover:opacity-0 transition-opacity duration-300">
                 <Landmark className="size-3 animate-bounce" />
                 <span className="hidden md:inline">Hover to Reveal</span>
                 <span className="md:hidden">Swipe to Reveal</span>
@@ -182,7 +182,7 @@ export function CampusExperience() {
           </div>
 
           {/* Stats Bar */}
-          <div className="flex flex-wrap items-center gap-6 justify-between border-b border-emerald-100 pb-8 mb-8 text-sm">
+          <div className="flex flex-wrap items-center gap-6 justify-between border-b border-brand-100 pb-8 mb-8 text-sm">
             <TimelineContent
               as="div"
               animationNum={6}
@@ -191,16 +191,16 @@ export function CampusExperience() {
               className="flex flex-wrap gap-8"
             >
               <div className="flex items-center gap-2">
-                <span className="text-emerald-700 font-extrabold text-lg sm:text-2xl">15+</span>
-                <span className="text-emerald-900/60 font-medium tracking-wide">Research Labs</span>
+                <span className="text-brand-700 font-extrabold text-lg sm:text-2xl">15+</span>
+                <span className="text-brand-900/60 font-medium tracking-wide">Research Labs</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-emerald-700 font-extrabold text-lg sm:text-2xl">85,000+</span>
-                <span className="text-emerald-900/60 font-medium tracking-wide">Academic Volumes</span>
+                <span className="text-brand-700 font-extrabold text-lg sm:text-2xl">85,000+</span>
+                <span className="text-brand-900/60 font-medium tracking-wide">Academic Volumes</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-emerald-700 font-extrabold text-lg sm:text-2xl">4.0 Acres</span>
-                <span className="text-emerald-900/60 font-medium tracking-wide">Eco-Campus</span>
+                <span className="text-brand-700 font-extrabold text-lg sm:text-2xl">4.0 Acres</span>
+                <span className="text-brand-900/60 font-medium tracking-wide">Eco-Campus</span>
               </div>
             </TimelineContent>
 
@@ -211,8 +211,8 @@ export function CampusExperience() {
               customVariants={revealVariants}
               className="flex items-center gap-2"
             >
-              <span className="text-emerald-700 font-extrabold text-lg sm:text-2xl">100%</span>
-              <span className="text-emerald-900/60 font-medium tracking-wide">Smart Classrooms</span>
+              <span className="text-brand-700 font-extrabold text-lg sm:text-2xl">100%</span>
+              <span className="text-brand-900/60 font-medium tracking-wide">Smart Classrooms</span>
             </TimelineContent>
           </div>
         </div>
@@ -221,7 +221,7 @@ export function CampusExperience() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* Main Copy */}
           <div className="md:col-span-2 space-y-6">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-emerald-950 tracking-tight leading-[115%]">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-brand-950 tracking-tight leading-[115%]">
               <VerticalCutReveal
                 splitBy="words"
                 staggerDuration={0.06}
@@ -246,7 +246,7 @@ export function CampusExperience() {
               className="grid sm:grid-cols-2 gap-8 text-[#406b5c] text-sm leading-relaxed"
             >
               <div className="space-y-3">
-                <h4 className="text-xs font-bold text-emerald-900 uppercase tracking-widest">
+                <h4 className="text-xs font-bold text-brand-900 uppercase tracking-widest">
                   Academic Core
                 </h4>
                 <p className="text-justify font-medium">
@@ -254,7 +254,7 @@ export function CampusExperience() {
                 </p>
               </div>
               <div className="space-y-3">
-                <h4 className="text-xs font-bold text-emerald-900 uppercase tracking-widest">
+                <h4 className="text-xs font-bold text-brand-900 uppercase tracking-widest">
                   Creative Commons
                 </h4>
                 <p className="text-justify font-medium">
@@ -265,14 +265,14 @@ export function CampusExperience() {
           </div>
 
           {/* Right Profile & Call-to-Action */}
-          <div className="md:col-span-1 bg-white/70 border border-emerald-100/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
+          <div className="md:col-span-1 bg-white/70 border border-brand-100/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
             <div>
               <TimelineContent
                 as="div"
                 animationNum={9}
                 timelineRef={sectionRef}
                 customVariants={revealVariants}
-                className="text-emerald-800 text-xl font-extrabold tracking-wide mb-1"
+                className="text-brand-800 text-xl font-extrabold tracking-wide mb-1"
               >
                 OLYMPUS
               </TimelineContent>
@@ -281,7 +281,7 @@ export function CampusExperience() {
                 animationNum={10}
                 timelineRef={sectionRef}
                 customVariants={revealVariants}
-                className="text-xs font-bold text-emerald-950/50 uppercase tracking-widest mb-4"
+                className="text-xs font-bold text-brand-950/50 uppercase tracking-widest mb-4"
               >
                 The Ultimate Academic Habitat
               </TimelineContent>
@@ -306,7 +306,7 @@ export function CampusExperience() {
                 <CampusVisitDialog>
                   <Button 
                     className={cn(
-                      "bg-[#04241a] hover:bg-[#044e3b] text-white rounded-xl px-6 py-6 font-bold text-[11px] tracking-[0.2em] shadow-sm transition-all duration-300 group",
+                      "bg-[#04241a] hover:bg-brand-950 text-white rounded-xl px-6 py-6 font-bold text-[11px] tracking-[0.2em] shadow-sm transition-all duration-300 group",
                       hasHover && "hover:-translate-y-0.5 hover:shadow-md"
                     )}
                   >

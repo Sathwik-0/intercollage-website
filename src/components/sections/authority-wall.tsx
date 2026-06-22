@@ -107,7 +107,7 @@ export function AuthorityWall() {
         
         {/* Title Block */}
         <div className="mb-16 flex flex-col items-center text-center">
-          <span className="mb-4 text-xs font-bold tracking-widest text-[#044e3b] uppercase">
+          <span className="mb-4 text-xs font-bold tracking-widest text-brand-950 uppercase">
             Section 03 — Authority Wall
           </span>
           <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight text-[#04241a] md:text-5xl md:leading-[1.15]">
@@ -215,10 +215,10 @@ function AuthorityCard({
       onMouseEnter={() => onHover(card.id)}
       onMouseLeave={() => onHover(null)}
       className={cn(
-        "rounded-2xl border border-emerald-100/50 bg-[#ffffff]/90 backdrop-blur-md p-2 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_12px_rgba(4,78,59,0.01)] cursor-pointer flex-shrink-0 text-left",
+        "rounded-2xl border border-brand-100/50 bg-[#ffffff]/90 backdrop-blur-md p-2 sm:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_12px_rgba(4,78,59,0.01)] cursor-pointer flex-shrink-0 text-left",
         isActive 
-          ? "border-emerald-500 bg-[#f4faf6] shadow-[0_12px_24px_rgba(4,78,59,0.04)] scale-[1.02]" 
-          : "hover:border-emerald-200",
+          ? "border-brand-500 bg-[#f4faf6] shadow-[0_12px_24px_rgba(4,78,59,0.04)] scale-[1.02]" 
+          : "hover:border-brand-200",
         isDimmed && "opacity-50",
         className
       )}
@@ -230,7 +230,7 @@ function AuthorityCard({
         </span>
         <IconComponent className={cn(
           "size-3 sm:size-4 transition-colors duration-300 flex-shrink-0",
-          isActive ? "text-[#044e3b]" : "text-slate-400"
+          isActive ? "text-brand-950" : "text-slate-400"
         )} />
       </div>
 
@@ -247,7 +247,7 @@ function AuthorityCard({
           ) : (
             <span>0</span>
           )}
-          <span className="text-xs sm:text-sm font-semibold text-emerald-600 ml-0.5">{card.suffix}</span>
+          <span className="text-xs sm:text-sm font-semibold text-brand-600 ml-0.5">{card.suffix}</span>
         </h4>
         <span className="text-[8px] sm:text-[10px] font-bold text-slate-500 mt-1 sm:mt-2 leading-tight line-clamp-2">
           {card.metric}
@@ -286,7 +286,7 @@ function MetricRow({
       onMouseEnter={() => onHover(card.id)}
       onMouseLeave={() => onHover(null)}
       className={cn(
-        "group cursor-pointer transition-all duration-300 relative border-b border-emerald-50/50 pb-5",
+        "group cursor-pointer transition-all duration-300 relative border-b border-brand-50/50 pb-5",
         isDimmed ? "opacity-50" : "opacity-100"
       )}
     >
@@ -296,7 +296,7 @@ function MetricRow({
         <span
           className={cn(
             "h-1.5 rounded-full flex-shrink-0 transition-all duration-300",
-            isActive ? "bg-[#044e3b] w-6" : "bg-emerald-200 w-2.5"
+            isActive ? "bg-brand-950 w-6" : "bg-brand-200 w-2.5"
           )}
         />
         
@@ -304,7 +304,7 @@ function MetricRow({
         <span
           className={cn(
             "text-base md:text-lg font-bold leading-none tracking-tight transition-colors duration-300",
-            isActive ? "text-[#044e3b]" : "text-[#406b5c]"
+            isActive ? "text-brand-950" : "text-[#406b5c]"
           )}
         >
           {card.metricValue.toLocaleString()}{card.suffix} — {card.metric}

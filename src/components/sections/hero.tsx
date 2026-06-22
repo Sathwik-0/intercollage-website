@@ -78,8 +78,8 @@ export function Hero() {
       {/* TOP HEADER DETAILS (Centered layout) */}
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center text-center mt-6">
         {/* Soft Green Ingress Pill Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-[#e6f4ea] px-4 py-1.5 text-xs font-bold text-[#044e3b] shadow-sm mb-6">
-          <Sparkles className="size-3.5 text-emerald-600 animate-pulse" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-[#e6f4ea] px-4 py-1.5 text-xs font-bold text-brand-950 shadow-sm mb-6">
+          <Sparkles className="size-3.5 text-brand-600 animate-pulse" />
           <span>Your Proven Pathway to IIT & AIIMS</span>
         </div>
 
@@ -104,7 +104,7 @@ export function Hero() {
           {/* Primary Button - Solid Emerald Green Capsule */}
           <CampusVisitModal>
             <button
-              className="rounded-full bg-[#044e3b] hover:bg-[#03382a] text-white text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-[0_4px_14px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_20px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
+              className="rounded-full bg-brand-950 hover:bg-[#03382a] text-white text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-[0_4px_14px_rgba(4,78,59,0.15)] hover:shadow-[0_6px_20px_rgba(4,78,59,0.25)] active:scale-95 cursor-pointer w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
             >
               Book Campus Visit
             </button>
@@ -116,7 +116,7 @@ export function Hero() {
               const el = document.getElementById("results");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="rounded-full border border-[#d0e7d8] bg-white hover:bg-emerald-50/50 text-[#044e3b] text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-sm active:scale-95 cursor-pointer flex items-center justify-center gap-1.5 w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
+            className="rounded-full border border-[#d0e7d8] bg-white hover:bg-brand-50/50 text-brand-950 text-sm font-bold tracking-wide px-7 py-3.5 transition-all shadow-sm active:scale-95 cursor-pointer flex items-center justify-center gap-1.5 w-full sm:w-auto max-w-[280px] sm:max-w-none text-center"
           >
             <span>Explore Results</span>
             <ArrowRight className="size-4" />
@@ -134,19 +134,19 @@ export function Hero() {
       >
         <div 
           ref={ref}
-          className="w-full bg-white border border-emerald-100 shadow-[0_24px_50px_rgba(4,78,59,0.06)] rounded-3xl overflow-hidden flex flex-col md:flex-row text-left min-h-[500px]"
+          className="w-full bg-white border border-brand-100 shadow-[0_24px_50px_rgba(4,78,59,0.06)] rounded-3xl overflow-hidden flex flex-col md:flex-row text-left min-h-[500px]"
         >
           {/* LEFT DASHBOARD SIDEBAR */}
-          <div className="hidden md:flex w-full md:w-56 bg-[#f4faf6] border-r border-emerald-100/50 p-4 flex-col gap-6 select-none shrink-0">
+          <div className="hidden md:flex w-full md:w-56 bg-[#f4faf6] border-r border-brand-100/50 p-4 flex-col gap-6 select-none shrink-0">
             {/* Mock brand header */}
             <div className="flex items-center gap-2 px-2">
-              <div className="flex items-center justify-center w-6.5 h-6.5 rounded bg-[#044e3b] text-white">
+              <div className="flex items-center justify-center w-6.5 h-6.5 rounded bg-brand-950 text-white">
                 <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M12 2L2 7l10 5 10-5-10-5z" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M2 17l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="font-extrabold tracking-[-0.03em] text-[#044e3b] text-sm">
+              <span className="font-extrabold tracking-[-0.03em] text-brand-950 text-sm">
                 Inter-College
               </span>
             </div>
@@ -158,7 +158,7 @@ export function Hero() {
                 type="text" 
                 placeholder="Search..." 
                 disabled 
-                className="w-full bg-white border border-emerald-100/80 rounded-lg py-1.5 pl-8 pr-3 text-[10px] text-slate-400 cursor-not-allowed outline-none"
+                className="w-full bg-white border border-brand-100/80 rounded-lg py-1.5 pl-8 pr-3 text-[10px] text-slate-400 cursor-not-allowed outline-none"
               />
             </div>
 
@@ -173,8 +173,8 @@ export function Hero() {
                     className={cn(
                       "flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-bold transition-all cursor-not-allowed",
                       link.active 
-                        ? "bg-[#044e3b] text-white shadow-sm" 
-                        : "text-[#406b5c] hover:bg-emerald-50/50 hover:text-[#044e3b]"
+                        ? "bg-brand-950 text-white shadow-sm" 
+                        : "text-[#406b5c] hover:bg-brand-50/50 hover:text-brand-950"
                     )}
                   >
                     <IconComponent className="size-4" />
@@ -189,15 +189,15 @@ export function Hero() {
           <div className="flex-1 p-6 flex flex-col gap-6 bg-white overflow-hidden">
             
             {/* Main Panel Header */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 border-b border-emerald-50/80 gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 border-b border-brand-50/80 gap-3">
               <div>
                 <h3 className="text-base font-extrabold text-[#04241a] flex items-center gap-1.5">
                   Academic Dashboard <span className="text-sm">👋</span>
                 </h3>
                 <span className="text-[10px] font-medium text-slate-400 mt-0.5 block">Let's stabilize study accuracy values.</span>
               </div>
-              <div className="flex items-center gap-2 rounded-lg border border-emerald-100 bg-[#f4faf6] px-3 py-1.5 text-[9px] font-bold text-[#044e3b]">
-                <Calendar className="size-3 text-emerald-600" />
+              <div className="flex items-center gap-2 rounded-lg border border-brand-100 bg-[#f4faf6] px-3 py-1.5 text-[9px] font-bold text-brand-950">
+                <Calendar className="size-3 text-brand-600" />
                 <span>01 Jan, 2026 - 05 Apr, 2026</span>
               </div>
             </div>
@@ -206,45 +206,45 @@ export function Hero() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               
               {/* Stat card 1 */}
-              <div className="rounded-xl border border-emerald-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
+              <div className="rounded-xl border border-brand-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase mb-1">Total Students</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight">
                   {inView ? <CountUp start={0} end={1500} duration={2.5} separator="," /> : "0"}
                 </span>
-                <span className="text-[9px] font-bold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
+                <span className="text-[9px] font-bold text-brand-600 bg-brand-500/10 border border-brand-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
                   <TrendingUp className="size-2.5" /> +29% Last Month
                 </span>
               </div>
 
               {/* Stat card 2 */}
-              <div className="rounded-xl border border-emerald-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
+              <div className="rounded-xl border border-brand-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase mb-1">Total Teachers</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight">
                   {inView ? <CountUp start={0} end={50} duration={2} /> : "0"}
                 </span>
-                <span className="text-[9px] font-bold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
+                <span className="text-[9px] font-bold text-brand-600 bg-brand-500/10 border border-brand-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
                   <TrendingUp className="size-2.5" /> +12% Last Year
                 </span>
               </div>
 
               {/* Stat card 3 */}
-              <div className="rounded-xl border border-emerald-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
+              <div className="rounded-xl border border-brand-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase mb-1">Total Parents</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight">
                   {inView ? <CountUp start={0} end={1200} duration={2.5} separator="," /> : "0"}
                 </span>
-                <span className="text-[9px] font-bold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
+                <span className="text-[9px] font-bold text-brand-600 bg-brand-500/10 border border-brand-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
                   <TrendingUp className="size-2.5" /> +12% Growth
                 </span>
               </div>
 
               {/* Stat card 4 */}
-              <div className="rounded-xl border border-emerald-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
+              <div className="rounded-xl border border-brand-50 p-4 bg-white shadow-[0_4px_12px_rgba(4,78,59,0.01)] flex flex-col text-left">
                 <span className="text-[8px] font-bold text-slate-400 tracking-wider uppercase mb-1">Total Staff</span>
                 <span className="text-2xl font-extrabold text-[#04241a] tracking-tight">
                   {inView ? <CountUp start={0} end={25} duration={1.5} /> : "0"}
                 </span>
-                <span className="text-[9px] font-bold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
+                <span className="text-[9px] font-bold text-brand-600 bg-brand-500/10 border border-brand-500/20 rounded px-1.5 py-0.5 mt-2 self-start flex items-center gap-0.5">
                   <TrendingUp className="size-2.5" /> +12% Last Month
                 </span>
               </div>
@@ -252,14 +252,14 @@ export function Hero() {
             </div>
 
             {/* Bottom visual graph: Accuracy Overview (re-drawn curves like inspiration) */}
-            <div className="border border-emerald-50 rounded-xl p-4 bg-white flex flex-col gap-4 text-left">
+            <div className="border border-brand-50 rounded-xl p-4 bg-white flex flex-col gap-4 text-left">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span className="text-[10px] font-extrabold text-[#04241a] uppercase tracking-wider">
                   Grand Test Accuracy Progression
                 </span>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   <span className="flex items-center gap-1 text-[9px] font-semibold text-slate-500">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> Present: 500
+                    <span className="w-2 h-2 rounded-full bg-brand-500" /> Present: 500
                   </span>
                   <span className="flex items-center gap-1 text-[9px] font-semibold text-slate-500">
                     <span className="w-2 h-2 rounded-full bg-rose-500" /> Absent: 200
@@ -274,10 +274,10 @@ export function Hero() {
               <div className="relative w-full h-44 mt-2">
                 {/* Horizontal dotted grid lines */}
                 <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
-                  <div className="border-t border-dashed border-emerald-900/30 w-full" />
-                  <div className="border-t border-dashed border-emerald-900/30 w-full" />
-                  <div className="border-t border-dashed border-emerald-900/30 w-full" />
-                  <div className="border-t border-dashed border-emerald-900/30 w-full" />
+                  <div className="border-t border-dashed border-brand-900/30 w-full" />
+                  <div className="border-t border-dashed border-brand-900/30 w-full" />
+                  <div className="border-t border-dashed border-brand-900/30 w-full" />
+                  <div className="border-t border-dashed border-brand-900/30 w-full" />
                 </div>
 
                 {/* SVG Curve lines replicating the inspiration graph */}
@@ -338,7 +338,7 @@ export function Hero() {
         </div>
 
         {/* Ambient background blur highlights (Soft Green) */}
-        <div className="absolute top-[20%] left-[50%] -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-emerald-500/5 blur-[100px] pointer-events-none z-0" />
+        <div className="absolute top-[20%] left-[50%] -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-brand-500/5 blur-[100px] pointer-events-none z-0" />
       </motion.div>
 
     </section>

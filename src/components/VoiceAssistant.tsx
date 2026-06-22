@@ -83,30 +83,30 @@ function VoiceAssistantInner() {
         onClick={() => setIsOpen(true)}
         className={cn(
           "fixed bottom-6 right-6 z-50 p-4 rounded-full text-white shadow-[0_8px_32px_rgba(4,78,59,0.3)] hover:scale-105 transition-all flex items-center justify-center group",
-          isOpen ? "opacity-0 pointer-events-none scale-75" : "opacity-100 scale-100 bg-[#044e3b] hover:bg-[#03382a]"
+          isOpen ? "opacity-0 pointer-events-none scale-75" : "opacity-100 scale-100 bg-brand-950 hover:bg-[#03382a]"
         )}
       >
         <Mic className="w-6 h-6" />
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[380px] bg-white/95 backdrop-blur-xl border border-emerald-100/50 rounded-3xl shadow-[0_20px_40px_-15px_rgba(4,78,59,0.2)] overflow-hidden flex flex-col max-sm:fixed max-sm:inset-0 max-sm:w-full max-sm:h-full max-sm:rounded-none max-sm:bg-white max-sm:border-none transition-all duration-300 animate-in slide-in-from-bottom-8 fade-in h-[600px] max-sm:h-[100dvh]">
+        <div className="fixed bottom-6 right-6 z-50 w-[380px] bg-white/95 backdrop-blur-xl border border-brand-100/50 rounded-3xl shadow-[0_20px_40px_-15px_rgba(4,78,59,0.2)] overflow-hidden flex flex-col max-sm:fixed max-sm:inset-0 max-sm:w-full max-sm:h-full max-sm:rounded-none max-sm:bg-white max-sm:border-none transition-all duration-300 animate-in slide-in-from-bottom-8 fade-in h-[600px] max-sm:h-[100dvh]">
           
           {/* Header */}
-          <div className="p-4 border-b border-emerald-50 bg-gradient-to-br from-[#044e3b]/5 to-transparent flex items-center justify-between shrink-0">
+          <div className="p-4 border-b border-brand-50 bg-gradient-to-br from-brand-950/5 to-transparent flex items-center justify-between shrink-0">
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center">
                 <div className={cn(
                   "w-2 h-2 rounded-full transition-colors",
-                  conversation.status === "connected" ? "bg-emerald-500" : "bg-zinc-300"
+                  conversation.status === "connected" ? "bg-brand-500" : "bg-zinc-300"
                 )} />
                 {conversation.status === "connected" && conversation.isSpeaking && (
-                  <div className="absolute inset-0 bg-emerald-500 rounded-full animate-ping opacity-50" />
+                  <div className="absolute inset-0 bg-brand-500 rounded-full animate-ping opacity-50" />
                 )}
               </div>
               <div className="flex flex-col gap-0.5">
-                <h3 className="font-bold text-[#044e3b] tracking-tight">FutureMap AI Advisor</h3>
-                <span className="text-xs font-medium text-emerald-600/70">
+                <h3 className="font-bold text-brand-950 tracking-tight">FutureMap AI Advisor</h3>
+                <span className="text-xs font-medium text-brand-600/70">
                   {conversation.status === "connected" ? "AI is listening & ready to speak" : "Voice & Text Assistant"}
                 </span>
               </div>
@@ -132,14 +132,14 @@ function VoiceAssistantInner() {
             
             {messages.length === 0 && conversation.status !== "connected" && !errorMsg && (
               <div className="flex-1 flex flex-col items-center justify-center text-center px-4 animate-in fade-in zoom-in duration-300">
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600">
+                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4 text-brand-600">
                   <Mic className="w-8 h-8" />
                 </div>
                 <h4 className="font-semibold text-zinc-800 mb-2">Hi, I'm FutureMap AI</h4>
                 <p className="text-sm text-zinc-500">Connect to start a voice and text conversation. I will reply using both!</p>
                 <button
                   onClick={startConversation}
-                  className="mt-6 bg-[#044e3b] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#03382a] transition-all shadow-lg"
+                  className="mt-6 bg-brand-950 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#03382a] transition-all shadow-lg"
                 >
                   Connect to AI
                 </button>
@@ -147,7 +147,7 @@ function VoiceAssistantInner() {
             )}
 
             {conversation.status === "connecting" && (
-              <div className="flex flex-col items-center justify-center flex-1 gap-3 text-emerald-600 animate-in fade-in">
+              <div className="flex flex-col items-center justify-center flex-1 gap-3 text-brand-600 animate-in fade-in">
                 <Loader2 className="w-8 h-8 animate-spin" />
                 <span className="text-sm font-medium">Connecting securely...</span>
               </div>
@@ -161,7 +161,7 @@ function VoiceAssistantInner() {
                 <div className={cn(
                   "px-4 py-2.5 max-w-[85%] rounded-2xl text-[15px] leading-relaxed",
                   msg.source === "user" 
-                    ? "bg-[#044e3b] text-white rounded-br-sm" 
+                    ? "bg-brand-950 text-white rounded-br-sm" 
                     : "bg-white border border-zinc-200 text-zinc-800 rounded-bl-sm shadow-sm"
                 )}>
                   {msg.text}
@@ -172,9 +172,9 @@ function VoiceAssistantInner() {
             {conversation.isSpeaking && (
                <div className="flex w-full justify-start animate-in fade-in">
                  <div className="px-4 py-3 bg-white border border-zinc-200 rounded-2xl rounded-bl-sm shadow-sm flex items-center gap-1.5">
-                   <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce" />
-                   <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce delay-75" />
-                   <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-bounce delay-150" />
+                   <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce" />
+                   <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce delay-75" />
+                   <div className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-bounce delay-150" />
                  </div>
                </div>
             )}
@@ -189,12 +189,12 @@ function VoiceAssistantInner() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder={conversation.status === "connected" ? "Type a message..." : "Connect first to chat..."}
-                className="flex-1 bg-zinc-100 border-transparent rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all disabled:opacity-50"
+                className="flex-1 bg-zinc-100 border-transparent rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all disabled:opacity-50"
               />
               <button
                 type="submit"
                 disabled={!inputText.trim() || conversation.status !== "connected"}
-                className="bg-[#044e3b] text-white px-5 rounded-xl text-sm font-semibold disabled:opacity-50 hover:bg-[#03382a] transition-all"
+                className="bg-brand-950 text-white px-5 rounded-xl text-sm font-semibold disabled:opacity-50 hover:bg-[#03382a] transition-all"
               >
                 Send
               </button>

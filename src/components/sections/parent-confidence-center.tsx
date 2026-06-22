@@ -124,8 +124,8 @@ export function ParentConfidenceCenter() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Community Badge */}
         <div className="flex justify-center mb-8">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">
-            <Users className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-brand-950 uppercase tracking-wider">
+            <Users className="size-3 text-brand-600 animate-pulse" />
             <span>Section 05 — Parent Confidence Center</span>
           </span>
         </div>
@@ -134,7 +134,7 @@ export function ParentConfidenceCenter() {
         <div className="text-center max-w-4xl mx-auto relative text-[#04241a] font-sans">
           
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
-            Built For Student Success. <span className="text-emerald-600">Trusted By Families.</span> <br className="hidden sm:inline" />
+            Built For Student Success. <span className="text-brand-600">Trusted By Families.</span> <br className="hidden sm:inline" />
             We create a structured 
             <TooltipProvider delayDuration={150}>
               <Tooltip>
@@ -155,9 +155,9 @@ export function ParentConfidenceCenter() {
                 <TooltipContent
                   side="bottom"
                   sideOffset={8}
-                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-emerald-100/60 z-50 text-left font-sans animate-fade-in"
+                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-brand-100/60 z-50 text-left font-sans animate-fade-in"
                 >
-                  <h4 className="font-extrabold text-xs text-[#044e3b] uppercase tracking-wider mb-1">
+                  <h4 className="font-extrabold text-xs text-brand-950 uppercase tracking-wider mb-1">
                     {TRUST_ITEMS[0].tooltipTitle}
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -190,9 +190,9 @@ export function ParentConfidenceCenter() {
                 <TooltipContent
                   side="bottom"
                   sideOffset={8}
-                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-emerald-100/60 z-50 text-left font-sans animate-fade-in"
+                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-brand-100/60 z-50 text-left font-sans animate-fade-in"
                 >
-                  <h4 className="font-extrabold text-xs text-[#044e3b] uppercase tracking-wider mb-1">
+                  <h4 className="font-extrabold text-xs text-brand-950 uppercase tracking-wider mb-1">
                     {TRUST_ITEMS[1].tooltipTitle}
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -221,9 +221,9 @@ export function ParentConfidenceCenter() {
                 <TooltipContent
                   side="bottom"
                   sideOffset={8}
-                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-emerald-100/60 z-50 text-left font-sans animate-fade-in"
+                  className="max-w-xs bg-white text-[#04241a] p-4 rounded-2xl shadow-[0_12px_32px_rgba(4,78,59,0.08)] border border-brand-100/60 z-50 text-left font-sans animate-fade-in"
                 >
-                  <h4 className="font-extrabold text-xs text-[#044e3b] uppercase tracking-wider mb-1">
+                  <h4 className="font-extrabold text-xs text-brand-950 uppercase tracking-wider mb-1">
                     {TRUST_ITEMS[2].tooltipTitle}
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -250,7 +250,7 @@ export function ParentConfidenceCenter() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-white/70 backdrop-blur-xl border border-emerald-100/50 rounded-3xl p-6 sm:p-8 shadow-[0_12px_40px_rgba(4,78,59,0.02)] select-none"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-white/70 backdrop-blur-xl border border-brand-100/50 rounded-3xl p-6 sm:p-8 shadow-[0_12px_40px_rgba(4,78,59,0.02)] select-none"
         >
           {TRUST_STATS.map((stat, index) => {
             const IconComponent = stat.icon;
@@ -261,17 +261,17 @@ export function ParentConfidenceCenter() {
                 style={isMobile ? undefined : { willChange: "transform, opacity" }}
                 className={cn(
                   "relative flex flex-col items-center justify-center p-4 min-h-[140px] rounded-2xl border border-transparent transition-all duration-500 ease-out cursor-pointer overflow-hidden",
-                  hasHover && "group hover:border-emerald-100/60 hover:bg-emerald-500/[0.02]"
+                  hasHover && "group hover:border-brand-100/60 hover:bg-brand-500/[0.02]"
                 )}
               >
                 {/* Dashed Left Border for grid dividers */}
                 {index !== 0 && (
-                  <div className="hidden md:block w-px h-12 border-l border-dashed border-emerald-100/80 absolute left-0 top-1/2 -translate-y-1/2" />
+                  <div className="hidden md:block w-px h-12 border-l border-dashed border-brand-100/80 absolute left-0 top-1/2 -translate-y-1/2" />
                 )}
 
                 {/* Mobile View: Static Stack (shown on mobile, hidden on desktop) */}
                 <div className="flex md:hidden flex-col items-center justify-center text-center gap-2">
-                  <div className="w-9 h-9 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                  <div className="w-9 h-9 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
                     <IconComponent className="size-4.5" />
                   </div>
                   <div className="flex items-center gap-1">
@@ -279,7 +279,7 @@ export function ParentConfidenceCenter() {
                       {stat.percentage}
                     </span>
                   </div>
-                  <p className="text-[#044e3b] font-bold text-[9px] uppercase tracking-wider">
+                  <p className="text-brand-950 font-bold text-[9px] uppercase tracking-wider">
                     {stat.label}
                   </p>
                   <p className="text-[10px] text-slate-500 font-medium max-w-[140px] leading-normal">
@@ -289,7 +289,7 @@ export function ParentConfidenceCenter() {
 
                 {/* Desktop View: Interactive Hover Reveal (hidden on mobile, shown on desktop) */}
                 <div className="hidden md:flex flex-col items-center gap-3 transition-all duration-500 ease-out transform translate-y-0 group-hover:-translate-y-12 opacity-100 group-hover:opacity-0 pointer-events-none">
-                  <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                  <div className="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
                     <IconComponent className="size-5" />
                   </div>
                   <span className="text-xs font-bold text-[#406b5c] tracking-wide text-center">
@@ -300,12 +300,12 @@ export function ParentConfidenceCenter() {
                 {/* Desktop Hover Content (hidden on mobile, shown on desktop) */}
                 <div className="hidden md:flex absolute inset-x-3 bottom-4 top-4 opacity-0 flex-col items-center justify-center transition-all duration-500 ease-out transform translate-y-12 group-hover:translate-y-0 group-hover:opacity-100 pointer-events-none">
                   <div className="flex items-center gap-1">
-                    <ArrowUp className="size-4.5 text-emerald-600 animate-bounce" />
+                    <ArrowUp className="size-4.5 text-brand-600 animate-bounce" />
                     <span className="text-3xl font-extrabold text-[#04241a] tracking-tight">
                       {stat.percentage}
                     </span>
                   </div>
-                  <p className="text-[#044e3b] font-bold text-[10px] uppercase tracking-wider mt-1 text-center">
+                  <p className="text-brand-950 font-bold text-[10px] uppercase tracking-wider mt-1 text-center">
                     {stat.label}
                   </p>
                   <p className="text-[10px] text-slate-500 font-medium text-center mt-2 leading-relaxed max-w-[180px]">

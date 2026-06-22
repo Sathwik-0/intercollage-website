@@ -116,8 +116,8 @@ export function TransformationStories() {
         
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-[#044e3b] uppercase tracking-wider">
-            <Sparkles className="size-3 text-emerald-600 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-100 bg-[#e6f4ea] px-3.5 py-1 text-[10px] font-bold text-brand-950 uppercase tracking-wider">
+            <Sparkles className="size-3 text-brand-600 animate-pulse" />
             <span>Real Student Outcomes</span>
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#04241a] leading-tight">
@@ -139,22 +139,22 @@ export function TransformationStories() {
               animationNum={0}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden"
             >
               <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#044e3b08_1px,transparent_1px),linear-gradient(to_bottom,#044e3b08_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
               
               <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
                 <div>
                   {/* Before / After Progress node */}
-                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-emerald-100 rounded-2xl p-4.5 mb-6">
+                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-brand-100 rounded-2xl p-4.5 mb-6">
                     <div>
                       <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-0.5">Before</span>
                       <span className="text-xs font-bold text-slate-700">{STORIES[0].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-600 animate-pulse" />
+                    <ArrowRight className="size-4.5 text-brand-600 animate-pulse" />
                     <div className="text-right">
-                      <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-[#044e3b]">{STORIES[0].after}</span>
+                      <span className="text-[9px] font-bold text-brand-950 uppercase tracking-widest block mb-0.5">After</span>
+                      <span className="text-xs font-extrabold text-brand-950">{STORIES[0].after}</span>
                     </div>
                   </div>
 
@@ -163,7 +163,7 @@ export function TransformationStories() {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center pt-4 border-t border-emerald-100/50 mt-auto">
+                <div className="flex justify-between items-center pt-4 border-t border-brand-100/50 mt-auto">
                   <div className="space-y-1.5">
                     <h3 className="font-extrabold text-base text-[#04241a] leading-none">
                       {STORIES[0].name}
@@ -171,11 +171,11 @@ export function TransformationStories() {
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
                       {STORIES[0].program}
                     </span>
-                    <span className="inline-flex rounded-full bg-emerald-50 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider">
+                    <span className="inline-flex rounded-full bg-brand-50 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider">
                       {STORIES[0].outcomeBadge}
                     </span>
                   </div>
-                  <div className="relative size-14 rounded-2xl overflow-hidden border border-emerald-100 shadow-sm shrink-0">
+                  <div className="relative size-14 rounded-2xl overflow-hidden border border-brand-100 shadow-sm shrink-0">
                     <img
                       src={STORIES[0].image}
                       alt={STORIES[0].name}
@@ -191,23 +191,23 @@ export function TransformationStories() {
               animationNum={1}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-[#044e3b] text-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.06)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-brand-950 text-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.06)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex flex-col justify-between h-full space-y-6">
                 <div>
                   <div className="flex justify-between items-center bg-white/10 border border-white/10 rounded-2xl p-4.5 mb-6">
                     <div>
-                      <span className="text-[9px] font-bold text-emerald-200 uppercase tracking-widest block mb-0.5">Before</span>
-                      <span className="text-xs font-bold text-emerald-100">{STORIES[1].before}</span>
+                      <span className="text-[9px] font-bold text-brand-200 uppercase tracking-widest block mb-0.5">Before</span>
+                      <span className="text-xs font-bold text-brand-100">{STORIES[1].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-300" />
+                    <ArrowRight className="size-4.5 text-brand-300" />
                     <div className="text-right">
                       <span className="text-[9px] font-bold text-white uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-emerald-300">{STORIES[1].after}</span>
+                      <span className="text-xs font-extrabold text-brand-300">{STORIES[1].after}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm font-medium italic text-emerald-50 leading-relaxed mb-6">
+                  <p className="text-sm font-medium italic text-brand-50 leading-relaxed mb-6">
                     "{STORIES[1].quote}"
                   </p>
                 </div>
@@ -217,7 +217,7 @@ export function TransformationStories() {
                     <h3 className="font-extrabold text-base text-white leading-none">
                       {STORIES[1].name}
                     </h3>
-                    <span className="text-[9px] font-bold text-emerald-200 uppercase tracking-wider block">
+                    <span className="text-[9px] font-bold text-brand-200 uppercase tracking-wider block">
                       {STORIES[1].program}
                     </span>
                     <span className="inline-flex rounded-full bg-white/10 border border-white/10 px-2 py-0.5 text-[9px] font-extrabold text-white uppercase tracking-wider">
@@ -245,19 +245,19 @@ export function TransformationStories() {
               animationNum={2}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex flex-col justify-between h-full space-y-6">
                 <div>
-                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-emerald-100 rounded-2xl p-4.5 mb-6">
+                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-brand-100 rounded-2xl p-4.5 mb-6">
                     <div>
                       <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-0.5">Before</span>
                       <span className="text-xs font-bold text-slate-700">{STORIES[2].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-600" />
+                    <ArrowRight className="size-4.5 text-brand-600" />
                     <div className="text-right">
-                      <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-[#044e3b]">{STORIES[2].after}</span>
+                      <span className="text-[9px] font-bold text-brand-950 uppercase tracking-widest block mb-0.5">After</span>
+                      <span className="text-xs font-extrabold text-brand-950">{STORIES[2].after}</span>
                     </div>
                   </div>
 
@@ -266,7 +266,7 @@ export function TransformationStories() {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center pt-4 border-t border-emerald-100/50 mt-auto">
+                <div className="flex justify-between items-center pt-4 border-t border-brand-100/50 mt-auto">
                   <div className="space-y-1.5">
                     <h3 className="font-extrabold text-base text-[#04241a] leading-none">
                       {STORIES[2].name}
@@ -274,11 +274,11 @@ export function TransformationStories() {
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
                       {STORIES[2].program}
                     </span>
-                    <span className="inline-flex rounded-full bg-emerald-50 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider">
+                    <span className="inline-flex rounded-full bg-brand-50 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider">
                       {STORIES[2].outcomeBadge}
                     </span>
                   </div>
-                  <div className="relative size-14 rounded-2xl overflow-hidden border border-emerald-100 shadow-sm shrink-0">
+                  <div className="relative size-14 rounded-2xl overflow-hidden border border-brand-100 shadow-sm shrink-0">
                     <img
                       src={STORIES[2].image}
                       alt={STORIES[2].name}
@@ -294,19 +294,19 @@ export function TransformationStories() {
               animationNum={3}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex flex-col justify-between h-full space-y-6">
                 <div>
-                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-emerald-100 rounded-2xl p-4.5 mb-6">
+                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-brand-100 rounded-2xl p-4.5 mb-6">
                     <div>
                       <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-0.5">Before</span>
                       <span className="text-xs font-bold text-slate-700">{STORIES[3].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-600" />
+                    <ArrowRight className="size-4.5 text-brand-600" />
                     <div className="text-right">
-                      <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-[#044e3b]">{STORIES[3].after}</span>
+                      <span className="text-[9px] font-bold text-brand-950 uppercase tracking-widest block mb-0.5">After</span>
+                      <span className="text-xs font-extrabold text-brand-950">{STORIES[3].after}</span>
                     </div>
                   </div>
 
@@ -315,7 +315,7 @@ export function TransformationStories() {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center pt-4 border-t border-emerald-100/50 mt-auto">
+                <div className="flex justify-between items-center pt-4 border-t border-brand-100/50 mt-auto">
                   <div className="space-y-1.5">
                     <h3 className="font-extrabold text-base text-[#04241a] leading-none">
                       {STORIES[3].name}
@@ -323,11 +323,11 @@ export function TransformationStories() {
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
                       {STORIES[3].program}
                     </span>
-                    <span className="inline-flex rounded-full bg-emerald-50 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider">
+                    <span className="inline-flex rounded-full bg-brand-50 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider">
                       {STORIES[3].outcomeBadge}
                     </span>
                   </div>
-                  <div className="relative size-14 rounded-2xl overflow-hidden border border-emerald-100 shadow-sm shrink-0">
+                  <div className="relative size-14 rounded-2xl overflow-hidden border border-brand-100 shadow-sm shrink-0">
                     <img
                       src={STORIES[3].image}
                       alt={STORIES[3].name}
@@ -343,19 +343,19 @@ export function TransformationStories() {
               animationNum={4}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex flex-col justify-between h-full space-y-6">
                 <div>
-                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-emerald-100 rounded-2xl p-4.5 mb-6">
+                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-brand-100 rounded-2xl p-4.5 mb-6">
                     <div>
                       <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-0.5">Before</span>
                       <span className="text-xs font-bold text-slate-700">{STORIES[4].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-600" />
+                    <ArrowRight className="size-4.5 text-brand-600" />
                     <div className="text-right">
-                      <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-[#044e3b]">{STORIES[4].after}</span>
+                      <span className="text-[9px] font-bold text-brand-950 uppercase tracking-widest block mb-0.5">After</span>
+                      <span className="text-xs font-extrabold text-brand-950">{STORIES[4].after}</span>
                     </div>
                   </div>
 
@@ -364,7 +364,7 @@ export function TransformationStories() {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center pt-4 border-t border-emerald-100/50 mt-auto">
+                <div className="flex justify-between items-center pt-4 border-t border-brand-100/50 mt-auto">
                   <div className="space-y-1.5">
                     <h3 className="font-extrabold text-base text-[#04241a] leading-none">
                       {STORIES[4].name}
@@ -372,11 +372,11 @@ export function TransformationStories() {
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
                       {STORIES[4].program}
                     </span>
-                    <span className="inline-flex rounded-full bg-emerald-50 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider">
+                    <span className="inline-flex rounded-full bg-brand-50 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider">
                       {STORIES[4].outcomeBadge}
                     </span>
                   </div>
-                  <div className="relative size-14 rounded-2xl overflow-hidden border border-emerald-100 shadow-sm shrink-0">
+                  <div className="relative size-14 rounded-2xl overflow-hidden border border-brand-100 shadow-sm shrink-0">
                     <img
                       src={STORIES[4].image}
                       alt={STORIES[4].name}
@@ -397,19 +397,19 @@ export function TransformationStories() {
               animationNum={5}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-white/80 backdrop-blur-xl p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex flex-col justify-between h-full space-y-6">
                 <div>
-                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-emerald-100 rounded-2xl p-4.5 mb-6">
+                  <div className="flex justify-between items-center bg-[#e6f4ea] border border-brand-100 rounded-2xl p-4.5 mb-6">
                     <div>
                       <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-0.5">Before</span>
                       <span className="text-xs font-bold text-slate-700">{STORIES[5].before}</span>
                     </div>
-                    <ArrowRight className="size-4.5 text-emerald-600" />
+                    <ArrowRight className="size-4.5 text-brand-600" />
                     <div className="text-right">
-                      <span className="text-[9px] font-bold text-[#044e3b] uppercase tracking-widest block mb-0.5">After</span>
-                      <span className="text-xs font-extrabold text-[#044e3b]">{STORIES[5].after}</span>
+                      <span className="text-[9px] font-bold text-brand-950 uppercase tracking-widest block mb-0.5">After</span>
+                      <span className="text-xs font-extrabold text-brand-950">{STORIES[5].after}</span>
                     </div>
                   </div>
 
@@ -418,7 +418,7 @@ export function TransformationStories() {
                   </p>
                 </div>
 
-                <div className="flex justify-between items-center pt-4 border-t border-emerald-100/50 mt-auto">
+                <div className="flex justify-between items-center pt-4 border-t border-brand-100/50 mt-auto">
                   <div className="space-y-1.5">
                     <h3 className="font-extrabold text-base text-[#04241a] leading-none">
                       {STORIES[5].name}
@@ -426,11 +426,11 @@ export function TransformationStories() {
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
                       {STORIES[5].program}
                     </span>
-                    <span className="inline-flex rounded-full bg-emerald-50 border border-emerald-100/60 px-2 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-wider">
+                    <span className="inline-flex rounded-full bg-brand-50 border border-brand-100/60 px-2 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-wider">
                       {STORIES[5].outcomeBadge}
                     </span>
                   </div>
-                  <div className="relative size-14 rounded-2xl overflow-hidden border border-emerald-100 shadow-sm shrink-0">
+                  <div className="relative size-14 rounded-2xl overflow-hidden border border-brand-100 shadow-sm shrink-0">
                     <img
                       src={STORIES[5].image}
                       alt={STORIES[5].name}
@@ -446,7 +446,7 @@ export function TransformationStories() {
               animationNum={6}
               customVariants={revealVariants}
               timelineRef={containerRef}
-              className="flex-1 flex flex-col justify-between rounded-3xl border border-emerald-100/50 bg-[#e6f4ea] p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden"
+              className="flex-1 flex flex-col justify-between rounded-3xl border border-brand-100/50 bg-[#e6f4ea] p-6 sm:p-8 shadow-[0_8px_30px_rgba(4,78,59,0.03)] hover:shadow-[0_12px_40px_rgba(4,78,59,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer relative overflow-hidden"
             >
               <CounselingModal variant="student">
                 <div className="w-full h-full flex flex-col justify-between relative">
@@ -454,7 +454,7 @@ export function TransformationStories() {
                   
                   <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
                     <div>
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 text-[9px] font-extrabold text-[#044e3b] uppercase tracking-widest mb-4">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-50 border border-brand-100 px-2.5 py-0.5 text-[9px] font-extrabold text-brand-950 uppercase tracking-widest mb-4">
                         Admission Cohort Open
                       </span>
                       <h3 className="text-xl sm:text-2xl font-extrabold text-[#04241a] leading-tight text-left">
@@ -465,8 +465,8 @@ export function TransformationStories() {
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-emerald-100/50 mt-auto flex items-center justify-between">
-                      <span className="text-xs font-bold text-[#044e3b] group-hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+                    <div className="pt-4 border-t border-brand-100/50 mt-auto flex items-center justify-between">
+                      <span className="text-xs font-bold text-brand-950 group-hover:text-brand-700 transition-colors flex items-center gap-1.5">
                         <span>Schedule Free Counseling</span>
                         <ArrowRight className="size-3.5 transform group-hover:translate-x-1 transition-transform duration-300" />
                       </span>
@@ -481,8 +481,8 @@ export function TransformationStories() {
         </div>
 
         {/* Elegant Bottom Line border decoration to match testimonial.tsx source */}
-        <div className="absolute border-b border-emerald-100/50 bottom-4 h-16 z-[2] md:w-full w-[90%] md:left-0 left-[5%] pointer-events-none">
-          <div className="container mx-auto w-full h-full relative before:absolute before:-left-2 before:-bottom-1.5 before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-emerald-100 after:absolute after:-right-2 after:-bottom-1.5 after:w-3 after:h-3 after:bg-white after:rounded-full after:border after:border-emerald-100"></div>
+        <div className="absolute border-b border-brand-100/50 bottom-4 h-16 z-[2] md:w-full w-[90%] md:left-0 left-[5%] pointer-events-none">
+          <div className="container mx-auto w-full h-full relative before:absolute before:-left-2 before:-bottom-1.5 before:w-3 before:h-3 before:bg-white before:rounded-full before:border before:border-brand-100 after:absolute after:-right-2 after:-bottom-1.5 after:w-3 after:h-3 after:bg-white after:rounded-full after:border after:border-brand-100"></div>
         </div>
 
       </div>
