@@ -1,23 +1,24 @@
 import { execSync } from 'child_process';
-import fs from 'fs';
 
-const envFile = fs.readFileSync('.env.local', 'utf8');
-const lines = envFile.split('\n').filter(l => l.trim() && !l.startsWith('#'));
+const envVars = [
+  { name: 'ELEVENLABS_API_KEY', value: 'sk_d4cf92e5477ae2ca6d8b5838afcec758c0f8034a0cfc4ab8' },
+  { name: 'NEXT_PUBLIC_ELEVENLABS_AGENT_ID', value: 'agent_5401kvrkptkkfa5rt1za576tttm0' },
+  { name: 'NEXT_PUBLIC_ELEVENLABS_VOICE_ID', value: 'cjVigY5qzO86Huf0OWal' },
+  { name: 'NEXT_PUBLIC_GROQ_MODEL', value: 'llama-3.3-70b-versatile' },
+];
 
-for (const line of lines) {
-  const [k, ...vParts] = line.split('=');
-  const v = vParts.join('=').trim();
-  
-  if (k) {
-    console.log(`Adding ${k} to production...`);
-    try {
-      try {
-        execSync(`npx vercel env rm ${k} production -y`, { stdio: 'ignore' });
-      } catch (e) {}
-      execSync(`npx vercel env add ${k} production --value "${v}"`, { stdio: 'inherit' });
-    } catch (e) {
-      console.error(`Failed to add ${k}`);
-    }
+for (const { name, value } of envVars) {
+  console.log(`Removing existing ${name}...`);
+  try {
+    execSync(`npx vercel env rm ${name} production -y`, { stdio: 'ignore' });
+  } catch (e) {}
+
+  console.log(`Adding ${name} to production...`);
+  try {
+    execSync(`npx vercel env add ${name} production --value "${value}"`, { stdio: 'inherit' });
+    console.log(`✓ ${name} added`);
+  } catch (e) {
+    console.error(`✗ Failed to add ${name}`);
   }
 }
-console.log('Done uploading envs!');
+console.log('Done!');
