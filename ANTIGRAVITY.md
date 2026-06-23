@@ -24,6 +24,61 @@ This file documents the core commands and design rules for building the digital 
 - **[FROZEN] Navbar Navigation System:** The `src/components/ui/navbar.tsx` active state tracking logic, smooth scrolling integration, and the IDs mapped across all 7 main sections are completely locked and functionally approved. They must absolutely NEVER be modified.
 - **[FROZEN] Navbar CTAs (Desktop & Mobile):** The "Book Campus Visit" buttons inside the navbar and their unmount-safe integration with `CampusVisitDialog` are 100% complete and functionally approved. They must never be altered or refactored.
 - **[FROZEN] FutureMap AI Advisor:** The `FutureMapAI` floating dock system, its right-edge CSS alignment, lazy loading logic, and z-index overlap fixes are completely locked and functionally approved. They must absolutely NEVER be modified or redesigned.
+- **[FROZEN] Routing & Core App Structure:**
+  - `src/app/layout.tsx` (Root Layout)
+  - `src/app/page.tsx` (Main Page composition)
+  - `src/app/globals.css` (Tailwind & custom glassmorphism styling)
+  - `src/app/favicon.ico`
+- **[FROZEN] AI Orchestrator & Voice/Chat Components:**
+  - `src/components/FutureMapAI.tsx` (Core Groq/TTS Integration)
+  - `src/components/FutureMapAILazy.tsx` (Lazy loader)
+  - `src/components/VoiceAssistant.tsx` (ElevenLabs Voice Widget integration)
+  - `src/components/ui/ai-input.tsx` (MorphPanel sliding input card)
+  - `src/components/ui/voice-input.tsx` (Voice capture HUD visualizer)
+- **[FROZEN] Backend API Routes:**
+  - `src/app/api/chat/route.ts` (Groq API Endpoint)
+  - `src/app/api/elevenlabs/signed-url/route.ts` (ElevenLabs Signed URL Auth)
+  - `src/app/api/tts/route.ts` (ElevenLabs TTS Generation Proxy)
+- **[FROZEN] Interactive Page Sections:**
+  - `src/components/sections/hero.tsx` (Obsidian glass hero section)
+  - `src/components/sections/authority-wall.tsx` (Logos & stats)
+  - `src/components/sections/performance-command-center.tsx` (Interactive bento charts & academic command deck)
+  - `src/components/sections/faculty-excellence.tsx` (Premium faculty cards)
+  - `src/components/sections/futuremap.tsx` (Bespoke AI roadmap interactive grid)
+  - `src/components/sections/learning-journey.tsx` (Timeline slider)
+  - `src/components/sections/parent-confidence-center.tsx` (FAQ accordions & trust metrics)
+  - `src/components/sections/proof-center.tsx` (Accreditations grid)
+  - `src/components/sections/urgency-layer.tsx` (Seats availability bar)
+- **[FROZEN] Shared Primitives & Layout Wrappers:**
+  - `src/components/ui/button.tsx`
+  - `src/components/ui/card.tsx`
+  - `src/components/ui/input.tsx`
+  - `src/components/ui/textarea.tsx`
+  - `src/components/ui/label.tsx`
+  - `src/components/ui/dialog.tsx`
+- **[FROZEN] Bespoke Motion & UI Transitions:**
+  - `src/components/ui/colorful-bento-grid.tsx`
+  - `src/components/ui/colorful-bento-demo.tsx`
+  - `src/components/ui/data-card-display.tsx`
+  - `src/components/ui/demo.tsx`
+  - `src/components/ui/ink-reveal.tsx`
+  - `src/components/ui/liquid-glass.tsx`
+  - `src/components/ui/marquee.tsx`
+  - `src/components/ui/ruixen-moon-chat.tsx`
+  - `src/components/ui/team-showcase.tsx`
+  - `src/components/ui/testimonial.tsx`
+  - `src/components/ui/testimonial-1.tsx`
+  - `src/components/ui/testimonial-demo.tsx`
+  - `src/components/ui/timeline-animation.tsx`
+  - `src/components/ui/timeline-rail.tsx`
+  - `src/components/ui/vertical-cut-reveal.tsx`
+- **[FROZEN] Libraries & Project Configs:**
+  - `src/data/programData.ts` (Static courses list)
+  - `src/lib/utils.ts` (cn helper)
+  - `design-system/vanguard-academy/MASTER.md` (Design specifications)
+  - `package.json`
+  - `tsconfig.json`
+  - `next.config.ts`
 ---
 
 ## Coding Guidelines & Design Rules (Hallmark + UI/UX Pro Max)
